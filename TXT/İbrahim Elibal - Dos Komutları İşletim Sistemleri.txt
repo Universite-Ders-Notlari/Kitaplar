@@ -1,0 +1,536 @@
+   Görme Engellilere göre uyarlanmýþ Dos Ýþletim sistemi ve komutlarý
+  Hazýrlayan:
+Ibrahim Elibal
+
+ASÝÝ KODLARINA GÖRE KAREKTERLER:
+
+! Ascii 33 ünlem
+' Ascii 39 tek týrnak
++ Ascii 43 artý
+% Ascii 37 yüzde
+& Ascii 38 ve
+/ Ascii 47 bölü
+( Ascii 40 sol parantez
+) Ascii 41 sað parantez
+= Ascii 61 eþittir
+? Ascii 63 soru iþareti
+* Ascii 42 yýldýz
+- Ascii 45 eksi, tire
+_ Ascii 95 alt çizgi
+, Ascii 44 virgül
+; Ascii 59 noktalý virgül
+: Ascii 58 iki nokta üstüste
+\ Ascii 92 tersbölü
+# Ascii 35 rakam iþareti
+$ Ascii 36 dolar iþareti
+< Ascii 60 küçüktür
+> Ascii 62 büyüktür
+" Ascii 34 çift týrnak
+@ Ascii 64 ed iþareti
+bibar Ascii 124 bibar iþareti
+~ Ascii 126 tilda iþareti_
+
+DOS ÝÞLETÝM SÝSTEMÝ HATA MESAJLARI
+     Bilgisayarla çalýþýrken onunla devamlý iletiþim halinde  olursunuz. Kullanýcý isteklerini komutlarla bildirirken bazý hatalar oluþur. Dos iþletim sisteminde karþýlaþýlan hata mesajlarýnýn anlamlarýný bilmek, çözüm üretmekte zorlanmamak anlamýna gelir.  Sýk karþýlaþýlan hata mesajlarý:
+  a)  Bat command or file name ( Yanlýþ komut veya yanlýþdosya adý) En çok karþýlaþýlan hata mesajýdýr. Çünkükomut yazýlýrken yanlýþ harflere basýlabilir. Olmayan programdosyalarýçalýþtýrmaya kalkýþabiliriz. Bunedenle yazarken doðru komutlarý yani doðru harfleri kullanmalýyýz.
+  b)  Bad or missing command interpreter (Bozuk ya da eksik komut iþlemcisi):
+Msdos komutlarý çalýþýrken Command.com dosyasý bozulduðunda
+ya da yanlýþlýkla silindiðinde bu hata mesajý görüntülenir. Hatayý
+düzeltebilmek bir sistem disketiyle bilgisayarý yeniden baþlatmak ve
+Command.com adlý dosyayý ana dizine kopyalamak gerekir.  c)  Data error reading drive A: (A sürücüsünde veri okumahatasý) Böyle bir
+mesajla karþýlaþtýðýmýzda büyükolasýlýkla disket bozulmuþtur. Msdos'un Scandisk programý çalýþtýrýlarak disket kurtarýlabilir. Eðer düzelme olmuyorsa disket yeniden formatlanmalýdýr.   Ç) Error in Exe file (Exe dosyasýnda hata) Çalýþtýrmak istenen uzantýsý exe olan dosyalarýn bozuk olduðunda görüntülenir.  
+d)  File not found (Dosya bulunamadý) Dos iþletim sisteminde yaptýðýmýz iþlemlerde eðer yanlýþ dosya adý yazmýþsak ya da o dosya gösterdiðimiz yerde bulunmuyorsa bu mesaj karþýmýza çýkar.
+  e)  Acces denied: (Eriþim engellendi) Sadece okunabilir
+niteliðe sahip bir dosya silinmek istendiðinde dosyanýn silinemeyeceðini  belirten bu mesaj ekrana  gelir.
+f) Batch file missing: Toplu iþlem dosyasýnýn bulunamadýðý uyarýsýnda bulunur.
+
+  g)  Directory all ready exist: Disk-diskette bulunan
+dizinleri ayný ortamda yeniden oluþturmak istediðimizde "Dizin zaten var" anlamýnda bu mesaj ekrana gelir.
+  h)  Drive not ready error
+ Sürücüye disket takýlý deðilken bilgisayar açýldýðýnda disket hazýr deðil
+anlamýnda bu mesaj ekrana gelir.
+  i) File can not be copied on to itself:
+Bir dosya yine ayný isimde ayný yere kopyalanmak istenildiðinde dosya kendi içerisine kopyalanamaz anlamýnda  bu mesaj ekrana gelir.
+  j)  General failure reading drive ... Abort, Retry, Ýgnore,  Fail?
+ Sürücüde bulunan disket okunamýyor. Disketin bozuk ya da formatsýz olmasý durumunda bu mesaj ekrana gelir.
+  Abort: Vazgeç, Retry: tekrar et, Ýgnore: Hatayý görme,Fail: Sürücü deðiþtir anlamlarýna gelir.
+  k)  Ýnsert system disk in drive A and press any key
+  Sürücüye bir sistem disketi takýlmasý gerektiðini belirten   bir mesajdýr.
+  l)  Ýnsufficent disk space 0 file(s) copied
+Hedef diskette boþ alan olmadýðý için kopyalama yapýlamayacaðýný  belirten mesajdýr.
+  m)  Ýnvalid Command.com
+  Kullanýlan Command.com dosyasý geçersizdir mesajýdýr.
+n)  Press any key to continue
+Devam etmek için herhangi bir tuþa bas.
+  o)  Program too big to fit in memory
+Program bellek için çok büyük.
+  Ö) Terminate Batch Job?(Y/N)
+  Toplu iþlem dosyasý çalýþýrken Ctrl artý C tuþlarý  seçilirse iþlemin yarýda kesilip kesilmeyeceðini sorgulayan bu mesaj ekrana gelir.
+
+  p)  Too many parameters
+Bir komuta ait olmayan bir parametre kullanýldýðýnda bu mesaj ekrana gelir.
+  r) Write protect error
+Disketin yazmaya ve silmeye karþý korumalý olduðunu bildiren mesajdýr.
+
+                                        Klavye kullanýmý:
+   Bu bölümde klavye üzerinde bulunan tuþlarý ve genel olarak ne iþe
+yaradýklarýný göreceðiz.   Kullandýðýmýz klavyeye göre tuþlarýn aldýðý özellikler farklýlýk göstermektedir. Ancak genel olarak her yerde kullanýlan klavye türünün üstünde bulunan tuþlarý anlatacaðýz.
+Klavyemizde grup olarak 5 tuþ grupu bulunmaktadýr. Bunlardan
+en büyüðü olan yazýlarýmýzý yazdýðýmýz bölümdür. Bu tuþ grubunda 62 adet tuþ bulunmaktadýr.    Yazýlarýmýzý yazdýðýmýz ana bölümde 5 satýr
+bulunmaktadýr. Bu satýrlarýn en üst satýrýnda bulunan tuþlar soldan saða doðru þöyledir:
+Týrnak 1 2 3 4 5 6 7 8 9 0 * - back-space
+   Üsten ikinci sýrada bulunan tuþlar:
+Tab Q W E R T Y U I O P Ð Ü Enter tuþunun bir bölümü    Üsten üçüncü sýrada bulunan tuþlar: Büyük harf kilidi A S D F G H J K L Þ Ý virgül Enter tuþunun bir bölümü
+   Yukarýdan aþaðýya doðru dördüncü sýrada bulunan tuþlar:
+Shift Küçüktür-Büyüktür Z X C V B N M Ö Ç . Shift    En alt satýrda bulunan tuþlar ise:
+Ctrl Windows Alt Space Alt indows1 Windows2 Ctrl
+   Bu tuþlarý sýralanýþýna göre sað el sol el olarak iki þekilde kullanýrýz. Ellerimize göre tuþlarýn ayrýmýný temel sýrada 
+bulunan F J tuþlarýnýn üstündeki kabartýlmýþ bölümler ayýrýr. Sol  elimizin iþaret parmaðý sol tarafta bulunan kabartýlmýþ tuþun üstüne yani F tuþunun üstüne konur.
+Diðer  parmaklarýmýzý buna göre diðer tuþlara yerleþtiririz. Yani sol el iþaret parmaðýmýz F tuþuna, Orta parmaðýmýz D  tuþuna, yüzük  parmaðýmýz S tuþuna, serçe parmaðýmýz A tuþuna gelir. Buna göre temel sýrada bulunan diðer tuþlarada J tuþunu baþlangýç olarak aldýðýmýzda parmaklarýmýzý yerleþtiririz. Sað el iþaret parmak J tuþuna, orta  parmak K tuþuna, yüzük parmak L  tuþuna, serçe parmak Þ tuþuna konur. Temel sýrada iki elin ortasýnda kalan tuþlar ise G H tuþlarýdýr. Bu tuþlardan G harfine sol el iþaret parmaðý ile, H tuþuna sað el iþaret parmaðý ile basýlýr. Temel sýrada bulunan Ý harfine de sað  el serçe parmakla basýlýr. Ayrýca temel sýrada bulunan , (virgül) tuþuna da sað el serçe parmakla basýlýr. Yine  temel sýrada bulunan büyük harf tuþu kilidine ise sol el  serçe parmakla basýlýr. Temel sýranýn sað tarafýnda  bulunan Enter tuþuna sað elimizi biraz kaldýrarak sað serçe  parmakla basarýz. Harf tuþlarýný öðrenmeyi sürdürelim.  Sol elimizle, temel sýranýn üstündeki tuþlarý þöyle
+kullanacaðýz: Sol el iþaret  parmaðýmýzla F tuþunun çok hafif  solunda üstte  bulunan R tuþuna basýyoruz. Orta parmak ile D  tuþunun çok hafif
+solunda üstte bulunan E tuþuna  basýyoruz. Yüzük parmaðýmýzla S tuþunun çok hafif solunda  üstte bulunan W  tuþuna basýyoruz. Serçe
+parmaðýmýzla A tuþunun çok hafif solunda üstte bulunan Q  tuþuna basýyoruz. Bu sýranýn solunda bulunan en son  tuþ ise Tab (sekme) tuþudur. Bu tuþa ise sol el serçe  parmakla basýyoruz. Sað  elimizle temel sýranýn üstündeki  tuþlarýn kullanýmý ise þöyledir: Temel sýrada sað el iþaret parmaðýmýzla  bastýðýmýz J tuþunun çok hafif solda üstte bulunan tuþ U tuþuna basýyoruz. Orta parmak ile K tuþunun çok  hafif solda üstte I tuþuna basýyoruz. Yüzük parmaðýmýzla L tuþunun çok hafif solda üstte O tuþuna  basýyoruz. Ýþaret  parmaðýmýzla Þ tuþunun çok hafif solunda üstte P tuþuna basýyoruz. Sað tarafta kalan Ð Ü  tuþlarýna da sað el serçe parmaðýmýzla basýyoruz. Yine bu sýranýn sað tarafýnda uçta bulunan enter tuþuna da sað el serçe parmakla basarýz. (Enter tuþu hem temel sýrada hem de üst sýrada geniþçe bulunan tek bir tuþtur.) Bu sýranýn
+ortasýnda kalan T Y tuþlarýndan T tuþuna sol el iþaret parmaðýmýzla Y tuþuna sað el iþaret parmaðýmýzla basýyoruz. Harflerin bulunduðu tuþ grubunun en üst satýrýnda bulunan tuþlarýn ellerimize göre daðýlýmý ise þöyledir: Sol el iþaret  parmaðýmýzla temel sýrada F onun üstündeki 
+sýrada R tuþlarýna basýyorduk. R tuþunun çok hafif solunda bulunan tuþ 4
+tuþudur. Orta parmaðýmýzla 3, yüzük parmaðýmýzla 2, serçe parmaðýmýzla 1 tuþlarýna basarýz. Yine  sol el serçe parmaðýmýzla en solda bulunan " (çift týrnak) tuþuna basarýz. Ortada kalan 5 6 tuþlarýndan 5 rakamýna sol el iþaret parmaðýmýzla, 6 rakamýna sað el iþaret parmaðýmýzla basarýz.  Sað el temel sýrada bastýðýmýz tuþ J onun üstünde bastýðýmýz tuþ U tuþu idi. U tuþunun çok hafif solda üstte bastýðýmýz tuþ 7 tuþudur. Orta parmak ile 8, yüzük parmak ile 9, serçe parmak ile 0 tuþlarýna basarýz. Bu sýranýn en saðýnda bulunan * - back-space (geriye doðru silme) tuþlarýna da sað el serçe parmakla basarýz. Yazý yazdýðýmýz bölümün temel sýranýn altýndaki
+sýrada bulunan tuþlar ise þöyle sýralanmaktadýr: Temel sýrada sol el iþaret parmaðýmýzla F tuþuna basýyorduk. Sol el iþaret parmaðýmýzla F tuþunun çok hafif sað altta bulunan V tuþuna basýyoruz. Orta parmakla ile D tuþunun çok hafif saðýnda altta C tuþuna basýyoruz. Yüzük parmaðýmýzla S tuþunun çok hafif saðýnda X tuþuna basýyoruz.  Serçe parmaðýmýzla A tuþunun çok hafif saðýnda altta Z tuþuna basýyoruz. Alt sýranýn Z tuþunun solunda bulunan Büyüktür- küçüktür tuþuna ise sol el serçe parmakla basýyoruz. Sol el serçe parmaðýmýzla alt sýranýn en solunda bulunan
+shift tuþuna da sol el serçe parmakla basýyoruz . Sað elimizin iþaret parmaðýyla bastýðýmýz  tuþ J tuþudur. Bu tuþun çok hafif saðýnda altta
+bulunan tuþ M tuþudur. Orta parmakla bastýðýmýz K tuþunun çok
+hafif saðýnda altta Ö tuþuna basýyoruz. Yüzük parmaðýmýzla bastýðýmýz L tuþunun çok hafif saðýnda altta Ç tuþuna basýyoruz. Serçe parmaðýmýzla bastýðýmýz Þ tuþunun çok hafif saðýnda . (nokta) tuþuna basýyoruz. Alt
+sýranýn en saðýnda bulunan shift tuþuna da sað el serçe parmaðýmýzla basýyoruz. Alt sýranýn iki elin ortasýnda kalan B N tuþlarýndan B harfine sol el iþaret parmaðý ile N tuþuna sað el iþaret parmaðýyla basarýz. Yazý yazdýðýmýz bölümün en altýnda bulunan tuþlar ise þöyledir: En alt
+sýranýn en solunda bulunan ctrl (control) tuþuna sol el serçe parmakla, bu
+tuþun yanýnda bulunan windows (Bu tuþ windows'da kullanýlýr) tuþuna kullanýmý sizce rahat olan parmaðýnýzla basýnýz. Bu tuþu izleyen sol alt
+(alternatif) tuþuna sol el baþ parmakla, ortada bulunan uzun tuþa sað ya da sol el baþ parmakla, bu tuþun saðýnda bulunan sað alt (alternatif) tuþuna sað el baþ parmakla, sonraki windows (bu tuþlar windows'da kullanýlýr)  tuþlarýna (Ýki adet) kullanýmý rahat olan parmakla ve en alt
+sýranýn en  saðýnda bulunan sað ctrl (control) tuþuna sað
+el serçe parmakla basarýz.   Yazýlarý yazdýðýmýz klavyenin hemen sað tarafýnda yani sað  ctrl tuþunun hemen saðýnda 4 adet tuþ bulunmaktadýr. Burada bulunan tuþlar yön tuþlarýdýr.  3 adet tuþ alt sýrada ve 1 adet tuþ ortada bulunmaktadýr. Sað elimizin iþaret parmaðýný solda olan tuþun üstüne gelecek þekilde sað el orta parmak ve yüzük parmaklarýmýzý tuþlara yerleþtiririz. Böylece orta parmaðýmýzla iki adet tuþu kontrol etmeye baþlarýz. Sað el orta parmaðýmýzla kontrol ettiðimiz tuþlardan yukarýda tek baþýna olan, yukarý yön tuþu, imleçimizi yukarýya doðru satýr satýr hareket ettirmeye yarar. Bu tuþun hemen altýnda bulunan, aþaðý yön tuþu ise, imleçimizi aþaðýya doðru satýr satýr hareket 
+ettirmek amaçýyla kullanýlmaktadýr. Sað el yüzük parmaðýmýzla kontrol
+ettiðimiz tuþ ile imleçimizi saða doðru 1 karekter hareket ettirir. Sað el iþiaret parmaðýmýzla kontrol ettiðimiz tuþ ile imleçimizi sola doðru 1 karekter hareket ettirmekte kullanýrýz.  Yön tuþlarýnýn hemen üstünde bulunan bölümdeki tuþ grubunda 6 adet tuþ bulunmaktadýr. Bu tuþlarýn
+yardýmýyla imleçimizi hýzlý hareket ettirebilmekteyiz. Kýsaca ekran üzerinde yaptýðýmýz tarama iþlemlerinde bize hýz kazandýrmaktadýr. 
+ Bu tuþlar iki sýra halinde bulunmaktadýr. 3 adet üst sýrada,3 adet alt
+sýrada olmak üzere 6 adettir.  Bu tuþlarýn üst sýrasýnda bulunan tuþlar soldan saða doðru þöyledir:  insert home page-up Bu bölümün alt sýrasýnda soldan saða doðru bulunan tuþlar: del end page-down Bu tuþ grubunu da sað elimizle kullanmaktayýz. Soldan saða doðru sað elimizin iþaret parmaðý, orta parmaðý ve yüzük parmaðýný bu tuþlarýn alt sýrasýna yerleþtirelim.  Burada bulunan tuþlarýn görevlerini genel özellikleriyle
+görelim. Sað el yüzük parmaðýmýzýn üzerinde bulunduðu tuþ "page own" tuþudur. Bu tuþun yardýmýyla o an çalýþtýðýmýz programýn özelliklerine göre þu iþlemleri yapabilmekteyiz:Ýmleçimizi, ekranýn neresinde olursak
+olalým, ekranýn en alt satýrýna götürür. Diðer bir yaptýðý görevse  imleçimizi bir sayfa ya da bir ekran görüntüsü ileri götürür.  Yine sað el yüzük parmaðýmýzla "page down" tuþunun hemen üstünde bulunan "page up" tuþunuda kontrol etmekteyiz. Bu tuþun görevi çalýþýlan programýn özelliklerine göre farklýlýk kazanmaktadýr. Çalýþýlan programa göre imleçimizi, ekranýn neresinde olursak olalým, ekranýn en üst satýrýna taþýr. Diðer göreviyse imleçimizi bir sayfa öne ya da ekran görüntüsünü bir önceki görüntüye taþýr.  Sað el orta parmakla kontrol ettiðimiz alt sýradaki tuþ "end" tuþudur. Bu tuþun görevi çalýþýlan programa göre  imleçimizi satýrýn sonuna ya da ekrandaki görüntünün en altýna götürür.
+Sað el orta parmakla kontrol ettiðimiz diðer bir tuþ "home" tuþudur. Bu tuþla çalýþýlan programa göre imleçimizi ya satýrýn baþýna ya da
+ekrandaki görüntünün üst bölümüne taþýr. Sað el iþaret parmaðýmýzla alt sýrada kontrol ettiðimiz tuþ "del" tuþudur. Bu tuþla, çalýþýlan programa
+veya iþletim sistemine göre farklý iþler yapmaktayýz. Temel olarak silme
+iþlemini yapan bu tuþ, Msdos'dayken üzerinde bulunduðumuz karekteri siler. Diðer kullaným alanlarý ise; bloklanmýþ ya da iþaretlenmiþ bölümleri siler. Sað el iþaret parmaðýmýzla üst sýrada kontrol ettiðimiz tuþ "insert" tuþudur. Bu tuþla yaptýðýmýz iþler de çalýþýlan programa göre farklýlýk kazanmaktadýr. Diðer göreceðimiz tuþ grubu ise klavyemizin en üst bölümünde bulunan 16 adet tuþ grubudur. Bu tuþlardan en soldaki tuþ "esc" tuþudur. Bu tuþla çalýþtýðýmýz programa göre ya programdan çýkmaya yarar ya da ekran görüntüsünü deðiþtirmeye yarar. Bu tuþtan sonra dört adetten oluþan 12 adet fonksiyon tuþlarý gelmektedir. Bu tuþlarýn sabitleþmiþ görevleri bulunmamaktadýr. Çalýþýlan programa göre,
+yapýlan programla ilgili iþlevleri aktif hale getirirler. F1-2-3-4....11-12 þeklinde isimlendirilirler. Bu tuþlardan sonra 3 adet tuþ daha  bulunmaktadýr. Bu tuþlarý soldan  saða doðru sýralandýðýnda: Print-screen (ekran görüntüsünü yazýcýdan almak), scro lock, pause tuþlarý yer alýr.   Klavyemizde bulunan 5'inci tuþ grubumuz, rakamlarýn
+bulunduðu tuþ grubudur. Bu tuþlar 17 adettir. Bu tuþlarýn en üstte ve sol köþede bulunan tuþun on- off olma durumuna göre buradaki tuþlar görev
+deðiþtirmektedir. Öncelikle Num-lock tuþunun on konumundayken
+tuþlarýn aldýklarý görevleri görelim: 
+En üst sýra ve soldan saða doðru: num-lock  /  *  -
+Üstten ikinci sýra ve soldan saða doðru:  7  8  9  +
+Üstten üçüncü sýra ve soldan saða doðru :  4  5  6  +
+Üstten dört'üncü sýra ve soldan saða doðru:  1  2  3  enter
+Üsten beþinci sýra ve soldan saða doðru: 0  .   enter
+ Sizinde fark ettiðiniz gibi num-lock tuþu on konumundayken burada bulunan tuþlar, ilk halleriyle kullanýlmaktadýr. Þimdi bu tuþlarýn num-lock off halindeyken aldýklarý görevleri görelim:
+/ (bölü),  * (yýldýz), + (artý), Enter   bu tuþlar ilk
+hallerini korumaktadýrlar. Ancak - (tire) tuþu kullanmýþ olduðumuz ekran okuma programýnýn Review (gös gezdir-tarama) moduna geçmek  için kullanýlýr.  Diðer kalan tuþlardan 5 rakamýný merkez aldýðýmýzda 2 tuþu aþaðý ok yön tuþuna, 8 tuþu yukarý ok yön tuþuna, 6 tuþu saða ok
+yön tuþuna, 4 tuþu sola ok yön tuþuna dönüþmektedir. Bunun yaný sýra 1 tuþu "end" tuþuna, 7 tuþu "home" tuþuna, 3 tuþu "page-down" tuþuna dönüþmektedir. Arta kalan 0 tuþu Msdos'da kullandýðýmýz ekran okuma programýnýn satýr okuma tuþu, . tuþu sistem imleçimizin hangi satýr ve kaçýncý karekterin üzerinde durduðunu söyleyen tuþ görevini almaktadýr.   Hatýrlayacaksýnýz bu bölümün baþlarýnda bazý tuþlardan bahsettim. Nerede  olduðunu öðrendiðiniz bu tuþlarýn ne iþe yaradýklarýný görelim: ctrl (control) tuþlarý yazý yazma klavyesinin en alt satýrýnýn en solunda ve en saðýnda olmak üzere iki adettir. Bu tuþlarla birlikte baþka tuþlar kullanýlmaktadýr. Ýþte birlikte kullanýlan tuþlara bazý joker görevler verilmiþtir. Ctrl tuþu ile birlikte joker görevi verilen tuþlar kullanýldýðýnda
+bu görevleri aktif hale gelir. örnek: ctrl artý s tuþuna bastýðýmýzda iþaretlenmiþ ya da üzerinde çalýþýlan bölüm disk-diskette kayýt edilir. Örnek2: ctrl artý f tuþuna bastýðýmýzda bir metin içerisinde bir kelimeyi arayabiliriz.
+ Alt (alternatif) tuþlar boþluk tuþunun sað ve solunda olmak üzere iki adettir. Bu tuþlarýn Msdos'da kullaným amaçlarý ctrl tuþlarýyla hemen hemen aynýdýr. Klavyede bulunmayan bazý karekterleri ekranda görüntülenmesi için bu alt tuþlarýndan yararlanýlýr. Bunlarýn yaný sýra ctrl tuþlarý gibi kendisiyle birlikte kullanýlan tuþlara verilen joker tuþ görevlerini aktif hale getirir. Örnek1: Vurguladýðýmýz ilk durum için þöyle bir örnek inceleyelim: @ (ed) iþaretinin klavyede belli bir tuþu bulunmamaktadýr. Bu iþareti ekranda görüntüleyebilmek için sað tarafta bulunan alt tuþuyla birlikte q harfine basmamýz gerekmektedir. Böyle @
+iþaretini elde ederiz. Örnek2: Klavyede bir çok iþaretin tuþu bulunmamaktadýr. Bu þekilleri ekranda görüntüleyebilmek için ascii kodlarýndan yararlanýrýz. Örneðin bibar iþaretini eski klavyelerde  ekranda görüntülemek için num-lock tuþunu on konumuna getiririz. Sol alt tuþunu basýlý tutarak en saðda bulunan rakamlarýn olduðu bölümden 124 tuþlarýz. Böylece biber simgesini elde ederiz.  Yazý yazdýðýmýz ana bölümde en solda alttan dört'üncü tuþ tab (sekme) tuþudur. Bu tuþ farklý görevler almaktadýr. Eðer yazý yazma ekranýndaysak bu tuþa bastýðýmýzda imleçimizi satýr baþýndan 5 karekter içeri taþýr. Ya da çalýþtýðýmýz programýmýzýn menüsündeyken menü içinde bulunan seçenekler arasýnda geçiþ yapmamýzý saðlar. Bu tuþa basarak istediðimiz seçeneðe geliriz.  Tab tuþunun hemen altýnda bulunan yani en solda alttan
+üçüncü tuþ Büyük harf kilit tuþudur. Bu tuþun on-off kullanýmlarý vardýr. Eðer bu tuþ on konumundaysa yazdýðýmýz sadece harfler büyük yazýlýr. Sürekli büyük harfle yazma durumlarýnda bu tuþun on konumu  kullanýlýr. Bu durumun dýþýnda bu tuþ off konumunda durmalýdýr.  Büyük harf kilit tuþunun hemen altýnda bulunan tuþ shift  tuþudur. Bu tuþu sadece ilk harfleri büyük yazýlacak kelimeler için ve çift kullanýmlý  tuþlarýn diðer özelliklerini elde etmek için kullanýyoruz. Bu tuþtan iki
+adet bulunmaktadýr. Soldaki tuþla ayný hizada diðer uçta bulunmaktadýr. Örnek: Ahmet yazmak istiyoruz.
+Klavyede A harfi solda bulunuyor. Bu nedenle sað elimizle sað taraftaki shift tuþunu basýlý tutarak A harfine sol elimizle basarýz. Ekranda A harfini büyük olarak görüntüleriz. Dikkat: tuþlar oldukça duyarlý olduðundan istediðimiz karekteri hafif bir dokunmayla elde ederiz.
+ Shift tuþuyla birlikte kullanýlan karekterler ve elde edilen karekterler:
+Shift artý nokta birlikte kullanýldýðýnda : iþareti (iki nokta üst üste)
+meydana gelir.  shift artý virgül ; (noktalý virgül) elde edilir. Shift artý < (küçüktür) tuþlarýnýn birlikte kullanýmýndan > (büyüktür) iþareti
+elde edilir.
+Shift artý 1 birlikte kullanýmýndan ! (ünlem) elde edilir.
+Shift artý 2 birlikte kullanýmýndan ' (apostrof) elde edilir.
+Shift artý 4 birlikte kullanýmdan + (artý) elde edilir.
+Shift artý 5 birlikte kullanýmýndan % (yüzde) elde edilir.
+Shift artý 6 birlikte kullanýmýndan & (and ) elde edilir.
+Shift artý 7 birlikte kullanýmýndan / (bölü ) elde edilir.
+Shift artý 8 birlikte kullanýmýndan ( sol parantez elde edilir.
+Shift artý 9 birlikte kullanýmýndan ) sað parantez elde edilir.
+Shift artý 0 birlikte kullanýmýndan = eþittir elde edilir.
+Shift artý * (yýldýz) birlikte kullanýmýndan ? (soru iþareti) elde edilir.
+Shift artý - (eksi) birlikte kullanýmýndan _ (altçizgi) elde edilmektedir.
+Ters-bölü (back-slash) iþaretini elde edebilmek için sað alt tuþu ile birlikte yýldýz tuþuna basmamýz gerekmektedir. Back-space tuþu yazdýðýmýz karekterleri bir geri olmak üzere siler. Yani imleçimizin üzerinde bulunduðu karekterden önceki  bulunan karekteri siler.    Msdos'da bazý dizinleri deðiþtirirken karþýlaþtýðýmýz ~ (tilda- sonsuz) iþaretinin klavyeden ascii kodlarýný kullanarak çýkarabiliyoruz. Bunun için num-lock tuþunu on konumuna getiriyoruz. Sol alt tuþuna elimiz basýlý iken rakamlarýn bulunduðu en saðdaki tuþ grubundan 126 tuþlamamýz  gerekmektedir.
+
+ÝÞLETÝM SÝSTEMÝ VE ÖNEMÝ:
+   Bir çok parçadan meydana gelen bilgisayardan yararlanabilmemiz
+için her þeyden önce bilgisayarýmýzýn çalýþýyor olmasý gerekir. Bilgisayarýmýzýn çalýþýyor olabilmesi için ve bizimle iletiþim saðlayabilmesi için bir programa (yazýlým) gereksinim duyulmaktadýr. Bu yazýlým sýradan bir yazýlým deðildir. Her program bilgisayarý çalýþtýramaz. Bilgisayarlarý çalýþtýrabilecek yazýlýmlar farklýlýk arzeder. Örneðin bir oyun programý bilgisayarý çalýþtýramaz. Bu oyun programýný
+bilgisayarda yüklü olan iþletim sistemi tarafýndan çalýþtýrýlýr. Bilgisayarlarýn çalýþmalarýný saðlayan disk yönetim sistemleri vardýr. Bilgisayarý tanýyan tüm çalýþmalarýný kontrol altýnda tutarak bilgisayarý yöneten yazýlýmlara iþletim sistemi denir. Ýþletim sistemi bilgisayarýn tüm birimleri arasýnda iletiþimi saðlar. Ýþletim sistemi yüklenmemiþ bilgisayarlarý hiç bir kullanýcý kullanamaz. Ýþletim sistemleri bilgisayarýn
+açýlmasý ve çalýþmasý için olmazsa olmaz programlardýr.  Ýþletim sistemi, bilgisayar donamlarý arasýnda iletiþimi saðlayarak, aygýtlarýn etkin kýlýnmasýný gerektiren yazýlýmlarý yükleyen, bu aygýtlarý kullanýcýnýn kontrolüne sunulmasýný saðlayan ve kullanýcýdan gelen komutlarla ilgili aygýtlara bildiren sistem yazýlýmlarýdýr.
+                       Ýþletim sistemlerinin iþlevleri:
+   1)  Kullanýcý ile merkezi iþlem birimi arasýnda iletiþim saðlar.
+   2)  Giriþ ve çýkýþ devreleri arasýndaki veri akýþ yönünü ve iþlemleri kontrol eder.
+   3)  Donaným aygýtlarýný yönetir.
+   4)  Programlarýn çalýþmasýný kontrol eder.
+   5)  Veri ve dosya saklama iþlemlerini yapar.
+   6)  Sistemin etkin bir þekilde iþlemesi için güvenlik ve kontrol saðlar.
+   Ýþletim sisteminin yukarýda sayýlan iþlevlerine dikkat edildiðinde,
+bir yöneticiden beklenen tüm sorumluluklarý ve yetkileri bulunmaktadýr.
+
+                          ÝÞLETÝM SÝSTEMÝ ÇEÞÝTLERÝ:
+   Günümüzde en çok yararlanýlan ve kullanýlan iþletim sistemleri þunlardýr: 1- Windows 95-98: Bu program etkileþimli ara bir programdýr.
+Bilgisayarýn ara birimleri arasýnda kolay, düzenli ve güvenli iletiþimi saðlayan iþletim sistemidir.
+   2- CPM: (Control program for micro computer) Micro bilgisayarlar için kontrol programý. Bu iþletim sistemi 8 bit'lik mikro bilgisayarlar için hazýrlanmýþtýr. Bu programýn özelliði; kendi yapýsýndaki donaným içinde bios'ta toplanmýþtýr. Programýn küçük bir yerinde yapýlabilecek bir deðiþikle diðer bilgisayarlarý da çalýþtýrmasý  saðlanmaktadýr. Günümüzde pek kullanýlmayan bir iþletim sistemidir.
+   3- Os2: Ýþletim sistemi 2  olarak da söylenmektedir. Bu sistem MSdos iþletim sistemindeki bazý sýnýrlamalarý  ortadan kaldýrmak için geliþtirilmiþtir. Msdos iþletim sistemindeki sýnýrlamalar; kullaným zorluðu, tekli programlama saðlamasý ve sadece 610 kb'lik bellek kullanabilmesidir. Bu da büyük bilgisayarla da bilgi alýþ-veriþini zorlaþtýrmaktadýr. Bu sýnýrlamalarý ortadan kaldýrabilmek için Os2 iþletim sistemi geliþtirilmiþtir.
+   4- Unix: Çok kullanýcýlý, taþýnabilir ve çoklu programlama olanaðý veren bir iþletim sistemidir. Ýlk olarak 1971 yýlýnda AT&T firmasýnda yazýldý. Daha sonra bu program geliþtirilerek taþýnabilirlik özelliði kazandý. Günümüzde yaygýn olarak kullanýlmaktadýr.    5- Dos: (Disk Operating System) Tek kullanýcýlý olan bu iþletim sistemi, çoklu programlama olanaðý ortamý saðlayamadýðýndan  kiþisel bilgisayarlarda kullanýlmaktadýr. Çok kullanýcýlý ortamlarda tercih edilmemektedir.    6- Mos: (Macintosh Operating System) Macintosh bilgisayarlar için geliþtirilen iþletim sistemi ÝBM uyumlu bilgisayarlarda kullanýlamaz. Daha çok masa üstü yayýncýlýk alanlarýnda tercih edilen ve baþarýlý olan bir iþletim sistemidir. Dosya yönetim ve programlama dillerinin uygulamalarýna yanýt vermeyen bir iþletim sistemidir. 
+
+                  DOS ÝÞLETÝM SÝSTEMÝ (Disk Operating system)
+   Bilgisayarýn kullanýcý ve kendi birimleri ile iletiþimi saðlayan, programlarýn çalýþmalarýný denetleyen yazýlým olan Dos iþletim sistemi olmadan bilgisayarýn kullanýcý komutlarýna yanýt vermesi olanaksýzdýr. Bilgisayarý kullanýcýnýn kullanýmýna hazýr duruma getiren sistemdir. Bilgisayarýn çalýþmasýyla yüklenir. Bu iþleme yükleme denir. 1)Dos iþletim sistemi yüklü bir bilgisayarýn açýlmasý: Dos iþletim sisteminin yüklenmesi iþlemini gerçekleþtirebilmek için öncelikle ÝBM  uyumlu en az 512 kb. Rem belleðe sahip bir bilgisayar sisteminin ve Dos iþletim sisteminin dosyalarýnýn yer aldýðý bir disket veya sabit diske gereksinim vardýr. 
+2)  a)  Disketle Dos iþletim sisteminin bilgisayara yüklenerek açýlmasý:
+  1)  Disket sürücüsüne, dos iþletim sistem dosyalarýnýn bulunduðu disketi takmadan önce bilgisayarýn elektrik düðmesi açýlýr.
+2) Disketin hareketli kýsmý sola doðru çekilebilir konumdayken ya da disket üstünde bulunan yuvarlak bölümün alta gelecek þekilde ve hareketli kýsým karþýmýza bakacak þekilde disket sürücüsüne takýlýr. 
+3) Kýsa bir süre sonra iþletim sisteminin belleðe yüklenmesi baþlar.
+  4)  Yükleme sýrasýnda sürücüden týkýrtýyý andýran sesler gelecektir.
+Ayrýca yükleme sýrasýnda sürücü ýþýðý yanacaktýr.
+  5)  Dos iþletim sisteminin yükleme iþlemi tamamlandýðýnda bilgisayar bizden yeni tarih girmemizi ya da geçerli olan tarihin onaylanmasýný isteyecektir.
+  6)  Ekrana A:\> komut kabul ifadesi gelecektir. A:\> ifadesinde geçen karekterlerin anlamlarý þöyledir: A  Disket sürücü adý. : Bu karekteri komutlarýmýzý yazarken yönlendirme karekteri olarak kullanýyoruz.  \ Bu karekteri ise; sürücü ile dizin adý arasýnda veya dizin ile dizin arasýnda ya da dizin ile dosya arasýnda ayýraç olarak kullanmaktayýz. > Bu iþaret büyüktür anlamýna gelmektedir.
+  7)  Komut kabul ifadesi belirdiðinde dos iþletim sistemi yüklenmiþ, bilgisayarýn birimleriyle iletiþim saðlanmýþ, komutlarý kabul edilebilir hale gelmiþ ve kullanýcýyla baðlantý saðlanmaya hazýr demektir.    b)  Dos iþletim sisteminin sabit diskten yüklenmesi:   Bilgisayar sabit diskten baþlatýlacaksa gerekli sistem dosyalarý sabit diskte yer aldýðýnda   yapýlacak tek þey bilgisayarýn elektrik düðmesini
+açarak iþletim sisteminin yüklenmesini beklemektir. Çünkü sabit disketten yükleme yapýlýyorsa bilgisayar bizden tarih ve zaman bilgilerini istemeyecektir. Bunun için gerekli toplu iþlem dosyalarý oluþturulmuþ olarak bilgisayarýn sabit diskinde vardýr. Yükleme iþlemi tamamlandýktan sonra C:\>  komut kabul ifadesi belirecektir. Buda bilgisayarýmýzýn kullanýma hazýr olduðu anlamýna gelir.
+
+                                  KÖK DÝZÝN:
+   Bir disket ya da sabit diskte en az bir dizin bulunur. Bunun adý kök dizindir. \ (ters bölü) iþaretiyle gösterilir. Dikkat edilmesi gereken bir
+nokta disket ya da sabit diskte bir tane kök dizininin olduðudur. Kök dizininin silinmesi veya açýlmasý mümkün deðildir. Bilgisayar açýldýðýnda ana dizin ekrana gelir.
+
+                            Dizin ya da alt dizin:
+   Bilgisayar çalýþýrken, bilgisayar, çalýþýlan sabit disk veya disketleri bölümlere ayýrma iþlemlerini yapar. Disk-disketleri bölümlere ayýrýp, bu
+bölümlere isim verip saklama iþlerine dizin oluþturma denir. Oluþturulan
+bu alanlar birer kayýt ortamýdýr. Bu ortamlara ayný gruplara ait bilgi ve
+programlarý yerleþtirmede kullanýrýz.
+                                  Alt Dizin:
+   Alt dizin,  kök dizininde açýlan dizin içinde kullanýcý tarafýndan açýlan
+dizinlerdir. Ana dizinin altýnda bulunan tüm dizinler alt dizin olarak
+adlandýrýldýðý gibi, alt dizinler içinde açýlan dizinlere de alt dizin denir.
+                         Dosya isimlendirme kurallarý:
+   Dosya ayný özelliklere sahip veri gruplarýnýn yer aldýðý ve belleklerde
+saklanabilen bilgilere denir. Dosyaya, Dos iþletim sisteminde
+kütük de denilmektedir. Dos iþletim sisteminde dosya (file) olarak yer
+alýr.
+                  Dosyalarý isimlendirme kurallarý þunlardýr:
+   1)  Dosya adý en fazla 8 en az 1 karekter olabilir.
+   2)  Dosya adýndan sonra nokta konarak dosyanýn niteliðine göre 
+uzantý konmalýdýr. Uzantý konurken, dosya uzantýsýnýn en fazla 3 karekteri aþmamasý gerekmektedir.
+   3)  Dosya adý verilirken: Nokta, apostrof, ters-bölü, bölü, noktalý virgül, artý, eþittir, parantez, büyüktür-küçüktür iþareti, virgül, soru iþareti, yýldýz gibi karekterler kullanýlmaz.
+   4)  Dosya adý verilirken karekterler arasýnda boþluk býrakýlmaz.
+   5)  Dosya adý ile uzantý arasýndaki nokta iþareti yazýlýrken boþluk býrakýlmaz.
+   6)  Dosya adý verilirken tire iþareti, dosya adýnýn baþýnda ve sonunda
+kullanýlmaz. (Tire iþareti, dosya isminin ortasýnda kullanýlabilir.)
+   7)  Dosya adý verilirken harf ve rakam karekterler birlikte kullanýlabileceði gibi sadece harf, sadece rakam karekterlerinden dosya adlarý oluþabilir.
+
+                          Dosya Uzantýsý ve Tipleri:
+   Dosya uzantýlarýna göre dosyalarýn özellikleri anlaþýlabilir. Dosya uzantýsý dos iþletim sisteminde en fazla 3 karekter olarak verilir.                      Dosyalar uzantýlarýna göre þöyledir:
+   Hemen çalýþabilir dosyalar. Bunlarýn uzantýsý com, exe, bat olabilir. Veri dosyalarý, bilgi dosyalarý, yardým dosyalarý gibi farklý dosyalar vardýr. Dosya uzantýlarý hem alfabetik karekter hem de sayýsal  
+karekterler veya bunlarýn karmasýndan oluþabilir.
+                       Uzantýlarýna göre dosya tipleri:
+ --.bat Toplu iþlem dosyasý. Komutlardan oluþmaktadýr.
+--.bak Yedeklenmiþ dosyadýr.
+--.pas Paskal programlama dili ile yazýlmýþ kaynak dosya.
+ --.dat Bu tür dosyalar veri dosyalarýdýr.
+ --.com Bu tür uzantýsý olan dosyalar çalýþtýrýlabilir dosyalardýr.
+--.exe Bu tür dosyalar çalýþtýrýlabilir dosyalardýr.
+--.sys Bu dosyalar iþletim sisteminin kaynak dosyalarýdýr.
+
+                             Çalýþabilir Dosyalar:
+   Çalýþabilir dosyalar uzantýlarýndan anlaþýlan dosyalardýr. Bu dosyalar belirli bir programýn çalýþmasýný saðlayan ve genellikle program ismiyle anýlan dosyalardýr. Örneðin, Pw programýný çalýþtýran çalýþabilir dosya pw.com dosyasýdýr. Bu dosyalar hemen çalýþan dosyalardýr. Bunlar bat, exe, com uzantýlý dosyalardýr. Bu dosyalarýn çalýþabilmesi için sadece isimlerini yazmak yeterli olacaktýr. 
+
+                   DOS ÝÞLETÝM SÝSTEMÝNÝN AÇILIÞ AÞAMALARI:
+   Dos iþletim sisteminin bilgisayara yüklenmesi (boot) olarak tanýmlanýr. Bilgisayar açýldýðýnda aþaðýdaki iþlemler gerçekleþir: 
+  a)  Ýlk olarak rom'da bulunan bios programý çalýþýr. Bu program bilgisayarýn parçalarýný kontrol eder. Çalýþmayan veya eksik olan parçalar varsa, bunlarý çeþitli þekillerde uyarý mesajý ile kullanýcýya bildirir.
+  b)  Bilgisayar, disket sürücüsünde disket olup olmadýðýný araþtýrýr. Eðer
+varsa 2 sistem dosyasýný Ýo.sys ve Dos.sys dosyalarýný yükler. Eðer disket sürücüsünde disket yoksa ayný iþlemleri sabit diskten tekrarlar. 
+  c)  Yukarýda yüklenen dosyalar çalýþtýktan sonra Command.com adlý
+dosyayý bularak çalýþtýrýr. Bu dosyada iþletim sisteminin içsel komutlarý vardýr. Bu dosyanýn çalýþmasýyla iþletim sisteminin bir kopyasý Ram'e yüklenmiþ olur.
+ Ç) Io.sys, Dos.sys ve Command.com dosyalarý belleðe yüklendikten
+sonra bilgisayarýn açýlýþta yapmasý gerekli düzenlemeler için config.sys
+ve bazý programlarý açýlýþta yükleyen Autoexec.bat toplu iþlem dosyasý
+çalýþtýrýlýr.
+  d)  Dos iþletim sistemi yüklenmiþtir.
+  e)  Ekranda C:\> komut kabul ifadesi görüntülenir.  Eðer bilgisayar disketten açýlýþ yapýlmýþsa A:\> komut kabul ifadesi ekranda görülür.
+
+                     DOS ÝÞLETÝM SÝSTEMÝ SÝSTEM DOSYALARI:
+   Dos iþletim sistemini sabit diskten veya disketten baþlatabilmek için sistem dosyalarýna gereksinim duyulur. 
+Bu dosyalar: Ýo.sys, dos.sys, command.com dosyalarýdýr. 
+Bu dosyalar bulunmasý gereken dosyalardýr. Bunlarýn dýþýnda programýn diðer üniteleriyle ilgili tanýmlar içeren config.sys ve autoexec.bat dosyalarýdýr.
+  a)Io.sys: Sistem dosyasýdýr. Bilgisayarýn ilk açýlýþýnda belleðe yüklenir ve sistemi yönetmeye baþlar. Bu dosya bilgisayar açýk kaldýðý sürece bellekte kalýr. Ýo.sys sistem dosyasý Copy komutuyla kopyalanamaz. Del komutuyla silinemez. Ýo.sys dosyasý disk veya diskette formatlama sýrasýnda /s parametresi kullanýlarak veya sys komutu kullanýlarak transfer edilir. Bu dosya eksik olduðunda iþletim sistemi yüklenemez. Sabit diske yüklü ve yalnýz okunabilir olarak yüklenir.   b)Dos.sys: Sistem dosyasýdýr. Bilgisayar açýlýþýnda belleðe yüklenir. Ýo.sys ile birlikte sistemi yönetir. Bu dosyada bellek açýk kaldýkça bellekte kalýr. Ýo.sys dosyasý için geçerli kurallar dos.sys dosyasý içinde geçerlidir. 
+  c)Command.com: Msdos'a ait bir sistem dosyasýdýr.
+Bilgisayarýn açýlýþýnda Ýo.sys, Dos.sys ve command.com dosyalarý belleðe yüklenerek sistemi yönetmeye baþlar. Command.com komut yorumlayýcý
+bir dosyadýr. Ýþletim sisteminin komutlarý bu dosyanýn içindedir. Bu dosya bilgisayar için zorunlu dosyalardan biridir.
+ Ç) Autoexec.bat: Bilgisayar açýlýrken disket veya diskten Ýo.sys ve
+Dos.sys dosyalarýný belleðe okur. Daha sonra açma programlarýnýn
+bulunduðu disket ve diskin ana-dizininde config.sys dosyalarý araþtýrýlýr.
+Config.sys dosyasý ana-dizininde varsa bu dosyada yazýlý olan bir takým
+ayarlamalarý yapar. Daha sonra command.com dosyasýný belleðe yükler.
+Bu dosyanýn yüklenmesiyle birlikte bilgisayar denetimi command.com
+dosyasýna geçer. Command.com ilk olarak bilgisayarýn ilk açýldýðý
+ortamda autoexec.bat dosyasýný arar. Bu dosya bulunursa bu dosyada yer
+alan gerekli iþlemleri yapar. Eðer dosya bulunmazsa bilgisayar günün
+tarih ve saat bilgilerini ister. Autoexec.bat dosyasýnýn önemi bilgisayar
+her açýldýðýnda yapýlmasý gereken tanýmlar ve deðiþiklikleri uygulamasýdýr.  Autoexec.bat dosyasý bulunduðu dizinin kök dizininde 
+bulunmalýdýr. Çünkü bu dosya özel bir toplu iþlem dosyasýdýr. Bilgisayar
+açýlýþ sýrasýnda bu dosyayý kök dizininde arar.
+  d) Config.sys: Bu dosya sistemin donaným özelliklerini deðiþtirmemize
+olanak verir. Özel komutlar kullanarak, sisteme kurulacak sürücüleri
+ilave eder. Bu dosyanýn sürücünün ana dizininde bulunmasý gerekir.
+Dosya bilgisayarýn açýlýþý esnasýnda 3 aþamada okunur. Dosya üzerindeki deðiþiklikler bilgisayar açýlýrken sistem tarafýndan yerine getirilecektir.
+
+                       ÝÇsel VE Dýþsal KOMUT KAVRAMLARI:
+   Dos iþletim sistemi komutlarý, kullanýcý ile bilgisayar arasýnda iletiþim saðlar. Bu iletiþimde rol oynayan unsur, kullanýcýnýn bilgisayarýn anlayacaðý dilden komutlar vermesidir. Bilgisayarýn dos'u yüklemesiyle otomatik olarak belleðe yerleþen komutlara iç komutlar denir. Bunlar bilgisayar açýldýktan sonra kullanýcý tarafýndan kullanýlabilmektedir. Bellekte fazla yer kaplamadýklarýndan ayrýca bir dosya halinde saklanmamýþlardýr. Bellekte fazla yer kapladýklarýndan belleðe yüklenmeyen komutlara dýþsal komutlar denir. Bunlar kendi adlarýyla anýlýr ve hemen çalýþabilir dosyalar halindedirler. Dýþsal komutlarýn çalýþtýrýlabilmesi için bu komut dosyalarýnýn çalýþýlan ortamda veya her taraftan çalýþabilmeleri için yol tanýmlarý yapýlmýþ olmalýdýr. 
+
+                      Joker ve yönlendirme karekterleri:
+   Dos iþletim sistemi dosya adlarýnýn aranmasý ve belirtilmesi sýrasýnda bazý karekterlerin joker olarak kullanýlmasýna izin vermektedir. Bu karekterlerin sayesinde dosya isimlerinden hatýrlayamadýðýmýz karetkerlerin yerine joker karekterler yazýlýr.   Dos iþletim sisteminde kullanýlan joker karekterler:
+ 1- ? (soru iþareti),
+ 2- * (yýldýz) karekterleridir.
+a) ? (soru iþareti): Dosya isminde yer alan tek bir karekter yerine geçer. Örneðin: Ýlk karekterini hatýrlayamadýðýmýz bir dosya adýný þu þekilde yazabiliriz: ?ýldýrým.txt Dos iþletim sistemi ilk karekter ne olursa olsun diðer karekterleri ayný olan dosyalarý dikkate alacaktýr. 
+b) * (yýldýz): Dosya isminde belirtilmeyen birden fazla karekteri temsil eder. Örneðin: ilk karekterini hatýrlayamadýðýmýz veya ismin bütün karekterlerini hatýrlayamadýðýmýz zamanlarda ve uzantýsý txt (metin dosyasý) olan bir dosyayý aradýðýmýzda joker karekterin kullanýmý þöyledir: *.txt ya da ilk karekteri r olan bir txt dosyasýný aradýðýmýzda kullanýmý þöyledir: r*.txt Böyle bir durumda dos iþletim sistemi uzantýsý txt olan bütün dosyalarý dikkate alarak bize mevcut olan bütün txt uzantýlý dosyalarý listeleyecektir.
+c) Yönlendirme : (iki nokta üst üste) karekteridir. Ýki nokta üstÜste karekteri çalýþýlan ortamlarýn deðiþtirilmesine veya seçilmesi iþleminde sürücü harfinden sonra yazýlarak iþlemleri o sürücüye yönlendirir. Örneðin: A:\> sürücüsünden C sürücüsüne geçmekiçin C: yazýlarak enter (giriþ ya da onay) tuþuna bastýðýmýzda çalýþýlan sürücü deðiþecektir. Komut kabul ifadesi C:\> olarak deðiþecektir.
+                           ÝÞLETÝM SÝSTEMÝ KOMUTLARI:
+                          Ýçsel Komutlar: (Ýnternal)
+                            Cls: (Ekran temizleme)
+   Dos ekranýnda çalýþýrken daha önceki yazýlan komutlarýn ekrandan silinmesi için kullanýlan komutur. Dos komutlarýnýn tam olarak uygulanabilmesi için komut kabul satýrýnýn temiz olmasý yani yanlýþ yazýlmýþ karekterlerin  temizlenmiþ ya da silinmiþ olmalýdýr. Cls komutunun kullanýmý þu þekildedir: C:\> Cls enter bas. Dir: (Dizin ve dosya adlarýný görüntüleme)    Çalýþýlan disk veya diskette kayýtlý bulunan dizin ve dosyalarýn ad, uzantý, kapladýklarý alan, oluþturulduklarý tarih, oluþturulduklarý saat bilgilerini isteyen komuttur. Yalnýz baþýna kullanýldýðýnda çalýþýlan disk veya diskette kayýtlý bulunan dizin ve dosyalarýn ad, uzantý, kapladýklarý alan, oluþturulduklarý tarih, oluþturulduklarý saat bilgilerini listeler. Ayrýca sürücünün adýný, seri numarasýný ve çalýþýlan dizinin adýný ekranda görüntüler.
+                          Dir komutunun Anahtarlarý:
+   a)  / (bölü) P
+  Bu anahtar dir/p þeklinde kullanýlýr. Bu anahtarýn görevi, bulunduðumuz sürücü veya dizin içindeki dosya ve dizin isimlerini sayfa sayfa olarak göstermektir. Dosya ve dizin isimleri ekrana sýðmadýðý  aman sayfa sayfa   olarak gösterilir. Sayfa sayfa gösterim esnasýnda kran durur ve bir sonraki sayfaya geçmeniz için herhangi bir tuþa basmanýzý bekler.
+   b)  /w Bu anahtar dosya ve dizin isimlerini sütunlar halinde ekrana listeler. Ekrana sýðmadýðýnda yukarý doðru kaydýrarak diðer dizin ve dosya isimlerini sütunlayarak listelemeye devam eder.   c)  /a Bu anahtar dosya ve dizinlerin niteliklerini gösterir. Görmek istediðimiz niteliðe göre a harfinin yanýna bazý harfler gelmektedir. Bunlar þöyledir: Gizli dosyalar için dir/ah, sistem dosyalarý için dir/as, dizinler için dir/ad, sadece okunabilir dosyalarý görebilmek için dir/ar, arþiv dosyalarýný göstermesi için dir/aa, gizli özelliði olmayan dosyalarý gösteren dir/a-h, sadece dosya isimlerini görüntüleyebilmek için dir/a-d, arþiv özelliði olmayan dosyalarý görüntüleyebilmek için dir/a-a, hem okunur hem de yazýlabilir dosyalarý görüntüleyebilmek için dir/a-r, sistem dosyasý özelliði olmayan dosyalarý görüntüleyebilmek için dir/a-s.    ç) /o Bu anahtar dosya veya dizin isimlerini sýralamada kullanýlýr. 
+1-  /on: Dosyalarý adýna göre A'dan Z'ye doðru sýralar.
+2-   /oe: Dosyalarý uzantýlarýna göre A'dan Z'ye doðru sýralar.
+3- /os: Dosyalarý kapladýklara alanlara göre küçükten büyüðe doðru sýralar.
+4-  /od: Dosyalarý bilgisayara kayýt tarihlerine göre küçükten büyüðe  doðru  sýralar.
+   d) /s Bu anahtar bulunduðumuz sürücü veya dizin içindeki diðer alt
+dizin ve dosyalarý görüntülemeye yarar. Nerede bulunuyorsak oradan itibaren bütün dizin ve dosyalarý görüntüler.    e) /b Bu anahtar sadece dosya ve dizin isimlerini görüntüler. Dosya ve dizinlere ait olan diðer bilgileri göstermez.    f) /l Bu anahtar dosya ve dizin isimlerini ekrana küçük harflerle yazarak listeler. 
+   Verify: 
+   Yan bellek birimi üzerine yazýlacak bilgilerin doðru olarak kayýt edilip edilmediðini kontrol eder. Bu komut bir anahtar komuttur. Eðer komutla birlikle On ifadesi kullanýlýrsa komutun iþlevi aktif, Off ifadesi kullanýlýrsa komut iþlevini pasif duruma getirir. Kullanýmý: Verify on veya off enter
+                                                  Copy:
+   Bir veya birden fazla dosyayý belirtilen yani gösterilen adrese kopyalar.
+Bu iþlemin yapýlmasý anýnda kopyalama yapýlan ortamda ayný isimden
+dosya varsa yeni dosyanýn burada bulunan dosyanýn üzerine yazýlýp yazýlmayacaðýný uyaran bir mesaj alýnýr. Eðer bu mesaja olumlu yanýt verirsek yeni dosya burada bulunan dosyanýn üzerine kopyalanýr. Yanýtýmýz olumsuz olursa kopyalama iþlemi iptal olur. Kullanýmý: 
+1- Öncelikle komutumuzu yazarýz ve boþluk tuþuna basarýz.  
+2- Copy  Kopyasý çýkarýlacak dosyanýn dizinin baðlý olduðu sürücü adý ve yönlendirme karekteri iki nokta üstüste ve ayýraç karekteri ters-bölü karekterini koyarýz. 
+3- Dosyanýn baðlý olduðu dizin adý.  
+4- Kopyasý alýnacak dosya adý ve uzantýsý, 
+5- Dosyanýn kopyalanacaðý hedef sürücü adý,
+6- Hedef dizin adý.
+Bu komutu uygularken pratik bir anýmsama ise þöyledir: neyi nereye kopyalayacaðýmdýr. Bu durumu ayrýntýlý bir örnekle þöyle gösterelim: Kök dizininde bulunan yunus adlý dizinindeki Emre.txt dosyasýný A sürücüsündeki bahar dizinine kopyalayalým. Ýzleyeceðimiz yol ise þöyledir: Copy C:\yunus\emre.txt A:\bahar\emre.txt enter  Eðer dosya ismini aynen koruyacaksak yeniden emre.txt yazmaya gerek yoktur. ancak dosya ismini deðiþtireceksek A:\bahar\ bölümünü yazdýktan sonra yeni isim ve uzantýyý doðru olarak yazarak enter tuþuna basmalýyýz. Bu iþlem doðru olarak yapýldýktan sonra bir dosya kopyalandý diye bir mesaj
+alacaðýzdýr. (1 File(s) copied.)
+   Copy komutuyla ayný sürücü veya ayný dizin içinde bulunan bir dosyanýn ismini deðiþtirerek niteliði ayný bir ikinci dosyayý oluþturabiliriz. Bunun için yapacaðýmýz iþlem þudur:
+1- Komut yazýlýr: Copy 2- Örneði çýkarýlacak dosyanýn adý: Aziz.txt 3- Dosyanýn yeni adý: Emre.txt enter tuþuna basýlýr. Baþka bir deðiþle C sürücüsünde bulunan Okul adlý dizinin içinde bulunan Aziz .txt dosyasýndan bir adet daha çýkartmamýz gerekiyor. Bunu þu iþlemle de yapabiliriz: Copy C:\okul\aziz.txt C:\okul\emre.txt enter tuþuna bas. Bu iþlem bittikten sonra 1 file(s) copied. (1 dosya kopyalandý) þeklinde bir mesaj verecektir.    Copy komutuyla yapabildiðimiz diðer bir iþlem ise 2 veya daha fazla dosyayý birleþtirerek yeni bir dosya oluþturmaktýr. Bu iþlemle genel olarak metin dosyalarýný birleþtirme yapabiliriz. Uzantýsý bat, txt olan dosyalarý birleþtirebiliriz. Bu iþlemi yaparken hangi dosyaya ek yapýlacaksa o dosya sýralamada önce yazýlýr. Örneðin, Murat ve Mesut bir ödev üstünde çalýþsýn. Bu ödevin ilk 5 baþlýðýnýn konularýný Murat, diðer 5 baþlýða ait konularý da Mesut yazsýn. Yazma iþlemi bittikten sonra dosyalarý birleþtirmek için þu iþlemi uygulayacaðýz: Biz okul adlý dizin içinde bulunalým. Copy C:\okul\murat.txt+mesut.txt odev.txt enter tuþuna bas. Burada önce yazýnýn ilk kýsmýný yazan Murat.txt önce yazýldý ve + (+ Bu iþaret artý karekteridir.) iþareti koyduk. Daha sonra Mesut.txt dosyasýný hiç aralýk vermeden artý iþaretinden sonra yazdýk. Boþluk tuþuna bastýktan sonra bu iki dosyanýn birleþiminden ortaya çýkacak olan yeni dosyanýn adýný ve uzantýsýný yazdýk. Bu iþlemleri yaptýktan sonra elimizde yeni bir dosya oluþmuþ olur. 
+                                   Copy con:
+   Bu komutun yardýmýyla bir satýr editörü oluþturabiliyoruz. Bu satýr editörüyle kýsa metin dosyalarý elde edebiliyoruz. Ancak ciddi yazýlarýmýzý burada yazmak çok zor olmaktadýr. Bu programda hareket olanaðý çok iyi deðildir. Bu komuttan daha çok toplu iþlem dosyalarý gibi kýsa mesajlar içeren txt veya bat uzantýlý dosyalar elde ederiz. 
+Kullanýmý: 
+1- Öncelikle komutu yazarak boþluk tuþuna basarýz: Copy con 
+2- Hangi sürücüde dosya oluþturacaksak o sürücünün adýný, yönlendirme karekterini, ayýraç karekterini yazarýz. 
+3- Hiç aralýk vermeden dizin adýný yazarýz. 
+4- Hiç aralýk vermeden ayýraç karekterini yazarýz. 
+5- Yeni oluþacak dosya adý ve uzantýsýný yazarýz. 6- son olarak enter tuþuna basarýz. 7- Yazý yazma iþlemimiz sona erdikten sonra F6 tuþuna basarýz. Biz dosya adýný daha önceden yazdýðýmýz için sadece enter tuþuna basarýz. 
+ Örnek: C sürücüsünde bulunan belgeler adlý dizinde kullaným.txt adýnda bir programýn hýzlý kullanýmýný anlatan bir metin dosyasý oluþturalým. Bunun için izleyeceðimiz yol þöyledir:
+ Copy con C:\belgeler\kullaným.txt enter Bu komutu yazdýktan sonra kullandýðýmýz ekran okuma programýndan herhangi bir geri bildirim alamayýz. Ancak ekran okuma programýnýn satýr okutma tuþuna bastýðýmýzda blank (boþluk) diyecektir. Artýk satýr editörü açýlmýþ olur. Metinimizi yazarken satýrýn sonuna kadar beklenmez. Kýsa satýrlardan oluþan yazýmýzý yazma iþlemi bittikten sonra bu dosyamýzý disk-diskete kayýtetmemiz gerekmektedir. Bunun için öncelikle fonksiyontuþlarýndan f6 tuþuna basarýz. Program burada bizden dosya ismini girmemizi beklemektedir. Ancak biz dosya ismini komutu ilk çalýþtýrdýðýmýz anda verdiðimiz için bu bölümü enter tuþuna basarak geçeriz. Enter tuþuna bastýktan sonra "1 file(s) copied" þeklinde bir mesaj gelecektir. Böylece dosyamýz kopyalanmýþ  olacaktýr.
+
+                             Del Silmek (delete):
+   Bu komutu kullanarak disketten veya diskten istenen dosya veya dosyalarý silebiliriz. Bu komutla dosyalar tam anlamýyla disk ve disketten silinmiþ olmazlar. Dosya veya dosyalarýn kayýtlý olduklarý alanlarýn serbestçe kullanýlabileceði anlamýna gelir. Ancak yeni bir dosya yazýldýðýnda ilk olarak serbest kalan bu alanlar üzerine yazýlýr. Böylece önceden Del komutuyla sildiðimiz dosyalar tam olarak silinir. Eðer sildiðimiz dosyalarý kurtarmak istiyorsak bu bölümde yeni dosya yazdýrmamýþ olmamýz gerekiyor. Diðer önemli bir kuralda sildiðimiz dosyalarýn baðlý olduklarý dizinin silinmemiþ olmasý gerekiyor ya da dizinle birlikte dosyalarýn silinmemiþ olmasý gerekiyor. Bu komutun kullanýmý: Del sürücü adý, dizin adý, dosya adý ve uzantýsý enter. Eðer silmek istediðimiz dosya ve dosyalarýn bizim onayýmýzý aldýktan sonra silinmesini istiyorsak: Del sürücü adý, dizin adý, dosya adý ve uzantýsý /p enter.
+Örnek: A sürücüsünde bulunan Davullar.txt dosyasýný silmek istiyoruz.
+Bunun için þu yolu izleyeceðiz: Del A:\davullar.txt enter tuþuna bas. Ya da bu silme iþlemini yaparken kullanýcýnýn onayýný aldýktan sonra yapsýn.
+Bunun için izleyeceðimiz yol: Del A:\davullar.txt /p enter'a bas. Bu komutu girdikten sonra ekranda davullar.txt dosyasýný silmek istiyormusunuz þeklinde bir mesaj belirecektir. Sizden Evet ya da hayýr tuþuna basmanýzý yani evet için Eðer kullandýðýnýz Dos iþletim sistemi Türkçe ise E tuþu, Eðer Ýngilizce ise Y tuþuna basýlýr. Hayýr seçeneðini seçecekseniz Türkçe için H tuþu, Ýngilizce ise N tuþuna basýlýr. Del komutuyla birlikte joker karekterler kullanýlabilir. Eðer Del *.* komutu verilirse çalýþýlan dizindeki tüm dosyalarýn silineceðini belirten bir uyarý mesajý belirir. Size uygun seçenek seçildikten sonra iþlem tamamlanýr. Dikkat: Bu komutu kullanýrken çok dikkatli olunmasý gerekmektedir. Özellikle joker karekterler kullanarak dosyalarý toplu silebiliriz. Bu karekterleri kullanýrken çok dikkatli olmamýz gerekmektedir. Ren: (Dosyalarý yeniden   adlandýrma. )    Dosya adlarýný deðiþtirmekte kullandýðýmýz komuttur. Rename (yeniden adlandýrma) anlamýna gelir. Kullanýmý: 
+1- Öncelikle komut yazýlýr: 
+2- Ren boþluk verilir, 
+3- Adý deðiþecek dosya adý ve uzantýsý yazýlýr, 4- Boþluk tuþuna basýlýr, 5- Dosyanýn yeni adý ve uzantýsý yazýlýr, 6- enter tuþuna basýlýr.  Örnek: Ren
+Salih.txt Veli.txt enter. Eðer bilgisayardan herhangi bir hata mesajý
+almadýysak yaptýðýmýz iþlem doðru olmuþtur anlamýna gelir. Ancak eðer deðiþtirme iþlemi sýrasýnda dosya adý ve uzantýsýný yanlýþ olarak yazmýþ olsak dahi bu iþlem gerçekleþir. Çünkü bu komut yazdýðýnýz ad veuzantýnýn ne olduðuna bakmaz sadece yaptýðýnýz iþlemin kurallarýna uygun olup olmadýðýna bakar.
+                                  Md: (Make Directory)
+   Çalýþan sürücü veya belirtilen sürücüde dizin oluþturan komuttur. Kullanýmý: Md Sürücü adý, dizin adý enter. Eðer sürücü adý vermeden yani yol tanýmý yapmadan bu komut uygulanýrsa çalýþýlan sürücü veya dizine verilen adla yeni bir dizin oluþturulur. Dizinler oluþturulurken dikkat edilmesi gereken kurallar dosyalara isim verirken geçerli olan kurallarla aynýdýr. Dizinler bulunduklarý dizinlerin alt dizinleri olarak açýlýr. Ayný dizin içine birden fazla dizin açabileceðimiz gibi alt dizinler içinde de dizinler açabiliriz. Örnekler: Çalýþtýðýmýz sürücü C olsun. Md C:\okul enter. Bu dizin C sürücüsünde oluþur. Bu dizin içinde sýnýf adýnda bir dizin daha oluþturabiliriz. Bunun içinde: Md C:\okul\sýnýf enter. Sýnýf dizinimiz C sürücüsündeki okul dizininin içinde oluþmuþ olacaktýr. Eðer istersek okul dizininin içindeki sýnýf dizininin içine de bir veya birden fazla dizin oluþturabiliriz. Bunun içinde: Md C:\okul\sýnýf\ders enter. Böylece C sürücüsünde bulunan okul dizininin içindeki sýnýf dizinine ders adýnda bir dizin daha oluþturmuþ oluruz.
+Dizin oluþtururken dizin oluþturacaðýmýz sürücü veya dizin içinde olmamýz gerekmiyor. Eðer yol tanýmýný doðru olarak yaparsak istediðimiz sürücü veya dizin içine yeni dizin veya dizinler oluþturabiliriz. Örnek: Biz C sürücüsünde ve okul adlý dizin içindeyiz. A sürücüsünde yeni bir dizin oluþturacaðýz. Bunun için izleyeceðimiz yol: Md A:\dernek enter. Böylece biz C sürücüsündeyken A sürücüsünde bir dizin oluþturmuþ oluruz. Ayný yolla oluþturduðumuz dizinin içine alt  dizinlerde oluþturabiliriz.
+                             Cd: (Change Directory)
+   Bu komut var olan dizinler içine girmeyi ve dizinler arasýnda hareket
+etmeyi saðlar. Kullanýmý: Cd sürücü adý hedef dizin adý enter. Bu komutu kullanabilmek için yazdýðýmýz dizinin bilgisayarýmýzda  oluþturulmuþ olmasý gerekiyor. Eðer dizin adýný yanlýþ yazmýþsak ya da o dizin  bilgisayarda bulunmuyorsa bize "geçersiz dizin" þeklinde bir  mesaj gelecektir. Eðer komutu doðru olarak uygularsak: Cd C:\okul enter. Doðru olarak iþlemi gerçekleþtirdiðimizde C:\okul> þeklinde komut kabul ifadesi ekranda görülecektir. Okul adlý dizinin içindeyizdir anlamýna gelir. Eðer sýnýf adýndaki dizinin içine girmek istiyorsak: Cd sýnýf enter. Ýþlemin doðru olup olmadýðý bilgisayarýn bize vereceði mesaj veya komut kabul ifadesinden anlaþýlýr. Eðer dizinden çýkmak istiyorsak cd.. þeklinde komut kullanýlýr. Bu iþlemi yaptýðýmýzda bulunduðumuz dizinden bir önceki dizine geliriz. Örneðin biz C:\okul\sýnýf\ders dizinleri içinde bulunalým. Bu komutu kullandýðýmýzda yani cd.. enter Bulunduðumuz ders dizininden sýnýf dizinine geliriz. Eðer bulunduðumuz alt dizinlerden veya dizinden doðrudan kök dizine dönmek istiyorsak bu kez cd\ komutunu kullanýrýz. ( \ iþareti ters bölü yani back slash anlamýna gelmektedir.)
+                                         Rd: (Remove Directory)
+   Bir dizini veya alt dizini silmek için kullanýlýr. Bu komut ile içi boþ olan
+ve içinde olmadýðýmýz dizinler silinir. Bu komutla sadece dizinler silinir. Dikkat edilmesi gereken silinecek dizinin içerisinde herhangi bir dosya ve dizin olmamasý gerekir. Ayrýca sileceðimiz dizinin içinde olmamamýz gerekmektedir. Kullanýmý: Rd sürücü adý dizin adý enter. Örnek: Rd C:\okul\sýnýf enter. Burada okul dizini içinde bulunan sýnýf dizinini silmiþ
+oluyoruz. Diðer dos komutlarýnda olduðu gibi iþlemlerimizi yaparken yol
+tanýmýna çok dikkat etmemiz gerekir.  Eðer Rd komutu kullanýlarak bir  izin silinmek isteniyor ancak bize hata mesajý veriyorsa yapmamýz gereken þey, dizinin içerisini kontrol etmek veya dizin ismini doðru olarak yazýp yazmadýðýmýzý kontrol etmektir.
+                                             Ver: (Versiyon)
+   Kullandýðýmýz Msdos iþletim sisteminin uyarlama numarasýný görüntüler. Amaç iþletim sisteminin versiyon numarasýný öðrenmektir.
+Kullanýmý: Ver enter   Örnek: Ver enter Görüntü: Msdos version 6.22.
+                                                  Type:
+   Dosyalarýn içeriðini görüntülemeye sahiptir. Bu komut yardýmýyla ascii
+içerikli dosyalarýn içeriðini görüntüleyebiliriz. Eðer ascii kotlarýyla kotlanmamýþ dosyalarýn içeriklerini görüntülemeye çalýþýrsak ekrana okunamayacak karekterler þeklinde gelir. 
+Kullanýmý: 
+1- Komut adý: Type 2- Boþluktan sonra sürücü adý, yönlendirme karekteri, ayýraç karekteri, 
+3- Hiç aralýk vermeden Dizin Adý 4- Hiç aralýk vermeden Dosya adý ve uzantýsý 5- Hiç aralýk vermeden enter tuþuna bas.  Örnek: Type C:\okul\odev.txt enter
+Böylece odev adlý dosyanýn içerisindeki yazýlarýn ne olduðunu okuyabiliriz. Burada unutulmamasý gereken, bu komutla sadece dosyalarýn içeriðini görüntüleyebiliriz, herhangi bir þekilde dosyanýn içeriðine müdahale edemeyiz. Örneðin hayat.txt dosyasýnýn içeriðini görelim: Type hayat.txt enter. Bu iþlemi yaptýktan sonra Ascii kodlarýyla
+yazýlmýþ dosyamýzýn içeriði karþýmýza gelir:  "Hayat bir çok zorluklarla doludur. Bu zorluklarla kimimiz mücadele eder, kimimiz de mücadeleden kaçarýz. Ya da bazýlarýnýn yaptýklarý gibi kendi beynimizi tatile gönderir baþkalarýnýn beyni ile yaþamayý tercih ederiz. Burada önemli olan birisinin veya birilerinin dayattýklarý deðil biz ne istiyoruz olmalýdýr...."
+                                              More:
+   Type komutuyla dosyalarýn içeriklerini görüntüleme esnasýnda eðer  azý
+ekraný taþýyorsa More komutunu Type komutuyla birlikte kullanýrýz. More komutu görüntülenen dosyayý ekran ekran bize gösterecektir. Yani
+eðer dosyamýz dos iþletim sisteminin bize tanýdýðý ekran boþluðunu dolduruyor ve taþýyorsa More komutunun yardýmýyla dosyayý bölüm bölüm ekranda görüntüleyebiliriz. Kullanýmý: Type hayat.txt bibar iþareti more enter   Bu komutu kullanýrken more yazmadan önce bibar olarak söylenen iþaret konur. Bu iþareti iki yolla elde edebiliriz. Birincisi sað tarafta bulunan alt tuþuna basarak büyüktür-küçüktür iþaretini çýkarttýðýmýz tuþlara birlikte basarak elde edebiliriz. Ýkincisi ise Ascii kodunu yazarak elde edebiliriz. Bunun için numlock tuþunun on konumunda olmasý gerekmektedir. Daha sonra sol tarafta bulunan alt tuþuna elimiz basýlýyken numaratörden yararlanarak 124 yazmamýz gerekecektir. Böylece bu iþareti elde etmiþ oluruz.
+                                              Path:
+   Bilindiði gibi çalýþabilir dosyalarýmýz vardý. Bu çalýþabilir dosyalarýn arama yolunu tanýmlamakta Path komutu kullanýlmaktadýr. Amaç: hangi ortam ve dizin olursak olalým istenilen çalýþabilir dosyayý çalýþtýrmaktýr. Kullanýmý: Path sürücü adý, dizin adý, enter   Örnek: Path C:\Pw enter    Sonuç: C sürücüsünde bulunan Pw adlý dizinde bulunan (com, bat, exe) hemen çalýþabilir dosyalar kök dizininde adlarý yazýldýðýnda çalýþýrlar. Path komutu satýrý olmadýðýnda adý geçen dizinlerde bulunan hemen çalýþabilir dosyalarý çalýþtýrmak için ilgili dizine girmek ve sonrada dosya adýný yazmak gerekecektir. Yol tanýmý (path) yapmak her zaman bize zaman kazandýracak ve iþlemleri daha çabuk yapabileceðiz. Hemen çalýþabilir dosyalara kök dizininden ulaþmak için bu komut genellikle Autoexec.bat toplu iþlem dosyasýna yazýlýr. Böylece bilgisayar her açýldýðýnda otomatik olarak komut belleðe yüklenir. Çalýþýlan sürücüdeki yol tanýmýný görmek için Path enter komutu uygulanýr. Böylece bellekteki yol tanýmý ekrana gelir.
+
+                                                      Prompt:
+   Ekranda görülen komut kabul ifadesini deðiþtiren komuttur. Amaç:
+Komut kabul ifadesinde istediðimiz ve gerekli gördüðümüz karekterlerin
+görüntülenmesini saðlamaktýr. Kullanýmý: Prompt yeni ifade dolar iþareti. Komuttan sonra yazýlan ifade ne olursa olsun ekranda komut kabul ifadesi olarak görülecektir. Deðiþtirilmediði sürece belleðe yerleþir. Bilgisayar kapanana kadar bellekte yüklü kalýr ve etkinliðini  korur. Örnek: Prompt Sevgi enter Böylece komut kabul ifadesi deðiþir. 
+Sevgi yazýsý sürekli ekranda görüntülen C:\> ifadesinin yerini alýr.  Deðiþtirmek için de ayný komut ayný þekilde kullanýlýr.  Yeniden eski görüntüyü elde etmek için Prompt $p$g yazarak enter tuþuna basýnýz. (Burada $ karekteri Dolar iþareti olarak kullanýlmýþtýr.) Görüntü tekrardan C:\> þekline dönüþecektir.
+             Prompt komutuyla kullanýlabilen karekterler:
+  a)  Ekranda sistem saatinin görüntülenebilmesi için $t þeklinde  kullanýlýr.
+  b)   Günün tarihini görüntüleyebilmek için $d þeklinde kullanýlýr.
+  c)   Çalýþýlan sürücü dizini için $p þeklinde kullanýlýr.
+  ç) Versiyon numarasýný görüntülemek için $v þeklinde kullanýlýr.
+  d)  Versiyon ve sürücü görüntülemek için $n þeklinde kullanýlýr.
+  e)   Büyüktür karekterini görüntülemek için $g þeklinde kullanýlýr.
+  f)   Küçüktür karekterini görüntülemek için $l þeklinde kullanýlýr.
+  g)   Eþittir karekterini görüntüleyebilmek için $q þeklinde kullanýlýr.
+                                 Vol: (Volume)
+   Diskete verilen etiket ismini ve format esnasýnda verilen numarayý ekranda görüntüler. Kullanýmý: Vol sürücü adý enter
+                                 Date: (Tarih)
+   Sistem tarihini verir ve deðiþtirmemizi saðlar. Kullanýmý: Date enter
+Bu komuttan sonra ekranda  þunlar yazacaktýr:
+Current Date Is Son 14/02/1999
+Enter New Date ../../....
+Önce gün sonra ay ve yýl yazýldýktan sonra enter tuþuna basarak yeni
+tarihi onaylamýþ oluruz.
+                                 Time: (Zaman)
+   Bu komutu yazarak enter tuþuna bastýktan sonra önce sistem saatini
+bize verir. Sonrasýnda yeni saati girmemizi ister.  Kullanýmý: Time
+Saat:dakika:saniye,silisiye enter
+Örnek: Time enter
+Current Time Is 10:01:21,56
+Enter New Time ..:..:..,..
+Bu komutu kullanýrken öncelikle 24 saat üzerinden yeni saat bilgisini, 60 dakika üzerinden yeni dakika bilgisini, 60 saniye üzerinden yeni saniye bilgisini ve salisiye bilgisini girdikten sonra enter tuþuna basarýz.
+
+                          Dþsal Komutlar: (External)
+                                     Tree:
+   Bu komutla, sürücüdeki, diskteki, disketteki dizin ve alt dizinler bir aðaç þemasý halinde ekranda görülür. Amaç: Belirtilen sürücüdeki dizinleri ve içindeki dosyalarý þematik olarak görüntülemektir. Kullanýmý: Tree sürücü adý\dizin adý\dosya adý/f/a  Burada F anahtarý her dizindeki dosyalarýn isimlerini verir. A anahtarý hýzlý bir yazýlým saðlayarak kod sayfalarýnda bulunan grafik karekterlerin kullanýlmasýný saðlar. Tree komutu yalnýz kullanýldýðýnda sadece dizinlerin þemasýný  görüntüler. Örnek: Tree enter yapýldýðýnda sadece dizinlerin þemasýný gösterir.
+
+                                   Deltree:
+   Bu komut belirtilen dizini ve dizinin içindeki tüm dizinleri silen komuttur. Del komutu yalnýzca dosyalarý silmekte kullanýlýrken, deltree komutu ile dizinleri ve dosyalarý silebiliriz. Amaç: Dizin ve içindeki dizin ve dosyalarý topluca silmektir. Kullanýmý: Deltree sürücü adý, dizin adý enter  Deltree komutu uygulandýðýnda ekrana silinecek dizin ile ilgili kullanýcýdan onay ister. Çünkü silme iþlemi ne olursa olsun her zaman tehlikelidir. Deltree komutu ile dizin ve dizin içinde silinen dosyalar tekrardan kurtarýlmasý mümkün deðildir. Örnek: Deltree Yeni enter  Bu komutu uyguladýktan sonra ekrana Yeni dizini ve tüm alt dizinleri silinsinmi (E/H) þeklinde bir görüntü gelir. Dizinin silinmesi isteniyorsa E
+istenmiyorsa H tuþuna basýlarak iþlem sonuçlandýrýlýr.
+                                   Undelete:
+   Bu komut, del komutuyla veya deltree komutuyla silinen dosyayý (disk- disketten) yeniden kurtarmaya yarar. Uyarý: Deltree komutuyla eðer dosyayý dizinle birlikte silmiþ iseniz kurtarmanýz mümkün deðildir. Kullanýmý: Undelete sürücü adý, dizin adý, dosya adý enter  Bir dosya silindiðinde hiç bir yazma veya sürücüden okuma iþlemi yapmadan hemen undelete komutu kullanýlmalýdýr. Aksi taktirde dosyanýn tam olarak kurtarýlmasý mümkün olmayabilir. Örnek: Undelete C:\okul\yazý.txt enter   Bu dizindeki daha önce silinmiþ dosya varsa arayarak bunlar kurtarýlacaktýr. Del komutuyla silme iþleminde 
+dosyalarýn adýnýn yalnýzca ilk karekterleri silinir. Undelete bu dosyalarý bularak kurtarýr. Komut verildikten sonra ekranda silinen dosyanýn ilk karekterinin yerine ? (soru iþareti) karekteri gelerek dosyanýn  geri kalan
+kýsmý görüntülenir. Daha sonra bu dosyayý kurtarmak isteyip istemediðimiz sorulur. Kurtarýlacak bir dosya ise Y (yes) deðilse N (no) seçeneði girilir. Y seçeneði girildiðinde bizden kurtarýlacak dosyanýn ilk karekterini yazmamýz istenmektedir. Ýlk karekteri yazdýktan sonra "dosya kurtarma iþlemi baþarýyla tamamlandý." Þeklinde bir mesaj gelecektir. Eðer undelete komutunu bütün dosyalarý kurtarmak için kullanmýþsak dosyalar teker teker kurtarýlacak ve her dosyanýn kurtarýlmasý esnasýnda kullanýcýdan onay istenecektir. Tercih edilen (Yes ya
+da No) seçeneðe göre iþlem yapýlýr.
+                                 Sys: (System)
+   Msdos iþletim sistemi sürekli geliþtirilmekte ve yenilenmektedir. Kullanýlan Dos iþletim sisteminin eskimesi nedeniyle yenileþmek, güncelleþmek isteyebiliriz. Yeni versiyon iþletim sisteminin dosyalarýný bilgisayara  yüklenmesini saðlayan komuttur.  Kullanýmý: Sys sürücü adý enter  Bu komutla Sys uzantýlý sistem dosyalarý ve command.com dosyalarý bilgisayara yüklenir. Sistem dosyalarý özel dosyalar olduklarýndan kopyalama komutlarýyla bilgisayara yüklenmezler. Sys komutuyla sistem disketleri oluþturulabilir.
+                                   Diskcopy:
+   Bir diskette bulunan dosyalarýn tamamý baþka bir diskete kopyalamak için kullanýlýr. Diskcopy yapýlacak disketlerin kapasiteleri ayný olmalýdýr. Eðer diskcopy yapacaðýmýz disket formatlý deðilse diskcopy komutu bu
+iþlemide yaparak disketi kopyalama iþlemini tamamlar. Amaç: Disketleri bire bir kopyalamaktýr. Kýsacasý disketin fotokopisini çýkarmaktýr. Kullanýmý: Diskcopy sürücü adý sürücü adý enter Burada dikkat edilmesi gereken durum, eðer bilgisayarýnýzda ikinci disket sürücünüz yoksa komuttan sonra sürücü adlarý yerine A: A: ifadeleri gelmelidir. Ýkinci sürücünüz varsa bukez komuttan sonra A: B: ifadeleri yazýlýr. Ancak artýk ikinci disket sürücü kullanýlmamakta olduðundan biz komuttan sonra A: A: yazarak enter tuþuna basacaðýz. Bu komut sadece disketleri bire bir kopyalamaya yarar. Sabit diskler disketlere kopyalanamaz.  
+ Bir program ya da metin disketinin bir örneðini çýkartmak istediðimizde þu yolu izleyeceðiz: Öncelikle program disketini disket sürücüye yerleþtireceðiz. Daha sonra Diskcopy A: A: yazarak enter tuþuna basacaðýz.
+"Kaynak disketi yerleþtirin devam etmek için bir tuþa basýn" þeklinde mesaj gelecektir. Kaynak disketi sürücüye yerleþtirdikten sonra herhangi bir tuþa basýlýr. Bilgisayar tarafýndan disket okunarak belleðe alýnýr. Okuma iþleminden sonra ekrana aþaðýdaki mesaj gelir. "A sürücüsüne hedef disketi yerleþtirin. Devam etmek için bir tuþa basýn. "Kaynak disketi çýkararak, boþ disketimizi A sürücüsüne yerleþtirdikten sonra herhangi bir tuþa basarýz. Belleðe okunan bilgiler diskete yazýlmaya baþlayacaktýr. Bu iþlem bittikten sonra "kopyalanma bitti. Baþka kopyalanacak disket var mý (E/N) " þeklinde mesaj gelecektir. Tercih ettiðimiz seçeneðe göre disket kopyalama iþlemi tamamlanmýþ olacaktýr.
+                                    Xcopy:
+   Bir disketten bir diskete veya bir diskten bir diske dosya veya dosyalarý,
+  alt dizinleri, bunlarýn içinde bulunan alt dizin ve dosya veya dosyalarla kopyalayan komuttur. Amaç: Ýstenen sürücüden belirtilen dizin ve alt dizinleri ya da dosya-dosyalarý baþka bir sürücüye kopyalamaktýr. Kullanýmý: Xcopy sürücü adý dizin adý dosya adý daha sonra gidecek hedef sürücü dizin ve dosya adý enter   Bu komutla en çok kullanýlan anahtar /s olmaktadýr. Belirtilen dizini tüm alt dizinleriyle ve dosya-dosyalarýyla birlikte kopyalamak için kullanýlýr. Örnek: Xcopy/s C:\okul\*.* A:\okul enter  Böylece C:\okul dizininde bulunan tüm dosya ve alt dizinleri A:\okul dizininin içine kopyalar. 
+  1-  /v: Kopyalama iþleminin doðru olup olmadýðýný kontrol eder.
+  2-  /a: Arþiv nitelikli dosyalarý kopyalamakta kullanýlýr.
+  3-  /e: Boþ olan alt dizinlerinde kopyalanmasýný saðlar. Dikkat: /e anahtarý  /s anahtarý ile kullanýlmaz.
+  4-  /p: Kopyalanacak her bir dosya için onay ister.
+  5-  /w: Xcopy kopyalama iþlemine baþlamadan,
+"Press eny key when ready to start copying files" þeklinde bir mesaj gelir. Bu mesajda Kopyalama iþlemini hazýr olduðunuzda bir tuþa basarak baþlatýnýz demektedir. Herhangi bir tuþa basmanýz durumunda kopyalama iþlemi baþlayacaktýr. 
+                                                Move:
+   Bu komuttan, dizinlerin adlarýný deðiþtirmek ve dosyalarý bir ortamdan
+baþka bir ortama taþýmak için yararlanmaktayýz. Move kelime olarak taþýma anlamýna gelir. Dosya taþýma amaçlý kullanýmý: Move sürücü adý dizin adý dosya adý bunlarý yazdýktan sonra gidecek hedef adresin tanýmý
+yapýlarak yani sürücü adý dizin adý dosya adý enter tuþuna bas. Örnek:  A sürücüsünde bulunan deneme adlý dizindeki oku.txt adlý dosyayý C sürücüsündeki belgeler adlý dizine taþýyalým. Bunun için þu yolu izlememiz gerekecektir: Move A:\deneme\oku.txt
+C:\belgeler\oku.txt enter bas.
+Böylece komut uygulandýktan sonra parantez içinde O.K) yani tamam seçeneði  çýkacaktýr. Eðer iþlem yanlýþ olmuþsa hata mesajý ekranda  belirecektir. Sonuç olarak A sürücüsünde bulunan oku.txt dosyasý oradan alýnarak C sürücüsündeki belgeler adlý dizine konmuþ olur. Move komutuyla dizinlerin adlarýný deðiþtirebilmekteyiz. Kullanýmý: Move sürücü adý dizin adý,  sürücü adý dizin adý  enter bas.  Örnek:  C sürücüsünde bulunan okul dizininin adýný deðiþtirmek istiyoruz. Bunun için þu yolu izleyeceðiz: Move C:\okul C:\dernek enter bas. Böylece okul dizininin adý dernek olarak deðiþmiþtir.
+                                 Mem: (Memory)
+   Bilgisayarýn kullanýlan ve kullanýlmayan boþ hafýza miktarýnýn yanýsýra, program yerleþtirilen ve yerleþtirilmeyen yerleri gösterir. Mem komutuyla birlikte /c anahtarý kullanýldýðýnda bellekte yüklü olan programlarýn listesini ve bellekte ne kadar yer kapladýklarýný gösterir. Kullanýmý: mem enter diðer kullanýmý  Mem/c enter
+
+                            Format: (Biçimlendirme)
+   Yeni alýnmýþ ya da eski bir disketi Dos iþletim sisteminde kullanabilmek
+için biçimlendirilmesini saðlayan komuttur. Formatlama iþlemleriyle disk veya disketler yeniden kullanýlabilir hale getirilebilmektedir. Disk-disket
+formatlanýrken eski bilgiler silinir. Bu nedenle disk-disketleri   formatlarken iyi kontrol ettikten sonra komutu uygulamak gerekir. Kullanýmý: Format sürücü adý /s/b/v/q/u/c/f: disket  kapasite enter
+  a)  /s: Formatlanan diskete Dos iþletim sisteminin sistem dosyalarýný yükler.
+  b)  /b: Dos sistem dosyalarýnýn daha sonradan yüklenebilmesi için disk-
+diskette yer ayýrýr.
+  c)  /q: Formatlama iþlemini hýzlý olmasýný saðlar.
+  Ç) /f: Formatlanan disketin kapasitesini bilgisayara girmeye yarar. Eðer formatladýðýmýz disketimiz 720 kb'lýk disket ise /f:720 þeklinde yazarýz. 
+Eðer 1.44'lük disketse /f:1440  yazarýz.
+  d) /u: Disketteki tüm bilgilerin silinmesini saðlar.  Bilgilerin kurtulmasý
+mümkün deðildir.
+  e)  /c: Disket üzerindeki bozuk alanlarýn düzeltilerek formatlanmasýný saðlar.
+  f)  /v: Disk veya diskete hacim etiketi verilmesini saðlar.
+        Formatlama iþlemi:
+   Formatlanacak disket hazýrlanýr. Format A: yazýlýr ve enter tuþuna basýlýr.
+ Ekrana aþaðýdaki mesaj gelecektir: A
+sürücüsüne yeni disket yerleþtirin ve devam etmek için enter tuþuna basýn. Bu mesajdan sonra disket sürücüye yerleþtirilir ve enter tuþuna basýlýr.  Formatlama iþlemi tamamlandýktan sonra bilgisayar diskete isim vermemizi bekler. (En az 0 en fazla  11 karekter olmalý.) Daha sonra ekrana disketle ilgili bilgiler gelmektedir. Burada disketin kapasitesiyle ilgili bilgilerin yanýsýra diskette eðer bozuk alanlar varsa bunlarla ilgili bilgiler de verir. Sonrasýnda baþka formatlanacak disket var mý yok mu þeklinde bir soru ekranda belirir. Tercih edeceðimiz seçeneðe göre iþlemimizi sonuçlandýrýrýz. Dikkat: /s ve /b parametreleri birlikte kullanýlmaz. Diðer paremetreleri birlikte kullanabilirsiniz.
+
+                                   Unformat:
+   Önceden biçimlendirilmiþ disketin eski haline getirilmesi yani format iþleminin geri alýnmasý iþlemini gerçekleþtirir. Dikkat: Eðer formatlama 
+iþlemi esnasýnda /u anahtarý kullanýlmýþsa formatý geri alma iþlemi gerçekleþmez. Kullanýmý: Unformat sürücü adý /j /u /test/p   a)  /j: Unformat komutuyla tek baþýna kullanýlýr.
+  b)  /u: Miror dosyasýný kullanmadan disketi kurtarýr. 
+  c)  /test: Bilgilerin nasýl kurtarýlacaðýný ve düzenleneceðini gösterir.
+  Ç) /p: Ekrana gelen mesajlarý yazýcýdan alýr.
+Komut uygulandýktan sonra bilgisayar bizden kurtarma iþlemini gerçekleþtirmek için disketi sürücüye yerleþtirmemizi ister ve hazýr olduðunuzda enter tuþuna basýnýz der.  Sonrasýnda çýkacak olan mesajlara Y (yes) seçeneðiyle yanýt verdiðinizde biçimlendirdiðiniz disketteki bilgiler kurtarýlacaktýr.
+                            Chkdsk: )Disk Kontrol)
+   Disk ya da disketimizi kontrol etmemizi saðlayan komuttur. Okunmaz ve yazýlmaz alanlarý tespit ederek kullanýlýr hale getirmeye çalýþýr.  Kullanýmý:
+Chkdsk Sürücü adý dizin adý,   dosya adý /f /v enter    /f anahtarý disketteki hatalý alanlarý belirleyerek temizler ve kullanýlabilir hale getirmeye  çalýþýr. /v disketteki  hatalý dizin ve dosyalarý tesbit eder ve bunlarla ilgili bilgi verir.
+
+                                   Scandisk:
+   Bu komutun çalýþtýrdýðý program disk-disket analizi yapar ve kontrol eder.
+Bozuk alanlarý bulur ve düzeltilebilecek tüm alanlarý onarýr. Chkdsk komutunun baþaramadýðý problemlerde kullanýlýr. Chkdsk komutunu kullandýðýnýzda son kýsmýnda verilen mesajda Scandisk yapmanýz önerilmektedir. Kullanýmý: Scandisk sürücü adý /all/autofix/surface 
+
+  a)  /all: Gösterdiðimiz sürücüde kurulu tüm dizinleri kontrol eder.
+  b)  /autofix: Tesbit ettiði hatalarý otomatik olarak onarýr.
+a) /surface: Yüzey taramasý yapar.
+                                              Attrib:
+   Dosyalara özellik veren veya özelliklerini kaldýran komuttur.  Ayný zamanda   dosyalarýn özelliklerini görüntülemeye yarar. 
+Kullanýmý: 1- Komut yazýlýr, boþluða basýlýr: Attrib 2- Dosyaya verilecek niteliðe göre eksi veya artý karekterleri yazýlýr 3- Hiç aralýk vermeden eksi-artý karekterinden sonra özellik simgeleri 4- Sürücü adý, yönlendirme karekteri, ayýraç karekteri, 5- Hiç aralýk vermeden Dizin adý, ayýraç karekteri, 6- dosya adý ve uzantýsý enter   
+a)  +r: Tanýmlanan dosyayý yalnýz okunabilir özelliði verir. Bu özellik dosyaya verildiðinde dosya ile ilgili iþlemlerin yapýlmasý engellenmektedir. Yani disya silinemez, dosya verileri içine herhangi bir veri  eklenemez ya da çýkarýlamaz. 
+  b)  -r: Dosyalara sadece  okunabilir özelliðini kaldýrmak için kullanýlýr.  c)  +a: Dosyaya arþiv özelliði verir. Dosya bu þekildeyken okunabilir, yazýlabilir ve silinebilirdir.
+  Ç) -a: Dosyanýn arþiv özelliðini kaldýrýr.
+  d)  +s: Dosyaya sistem dosyasý özelliði verir.
+  e)  -s: dosyanýn sistem dosyasý özelliðini kaldýrýr.
+  f)  +h:  Dosyayý bulunduðu dizin içerisinde gizler. Normal listeleme
+esnasýnda görülmez.  g)  -h: Dosyanýn gizlilik özelliðini kaldýrýr.
+Ð) /s: Bu anahtarýn kullanýlmasýyla alt dizinlerdeki dosyalarýda iþleme tutar.
+ Örnek1: Attrib +r C:\okul\*.txt enter  Okul dizini içinde bulunan txt
+uzantýlý dosyalarý sadece okunur
+hale dönüþtürür. (R harfinden önce kullanýlan + karekteri artý karekteridir.)
+ Örnek2: Attrib +h C:\sýnýf\B*.txt enter  Burada komut, Sýnýf dizini içinde
+bulunan B harfi ile baþlayan bütün txt
+dosyalarýný gizler. (B harfinden sonra kullanýlan karekter * yýldýz karekteridir.)
+ Örnek3: Attrib -r -s -h -a C:\okul\*.* enter  Burada komut okul dizini içinde bulunan tüm dosyalara daha önceden verilmiþ özellikleri iptal etmektedir.
+                              Label: (Etiketleme)
+   Disk veya disketin etiket ismini deðiþtirir ya da oluþturur.  Kullanýmý:
+Label sürücü adý etiket adý enter   Burada disket veya disk adý en fazla 11 en az 0 karekter olabilir.  Örnek: A sürücüsündeki disketimizin adý yedek 1 olsun.  Bunu deðiþtirmek istediðimizde þu yolu izleyeceðiz: Label A: enter bas. Bu iþlemi yaptýktan sonra bilgisayar bize önce eski isimi okuyacaktýr. Daha sonra deðiþtirmek istiyorsak en fazla 11 karekterden oluþan yeni isimi girmemizi ister ya da enter tuþuna tekrar basarak herhangi bir deðiþiklik yapmadan iþlemi sonlandýrmamýzý ister. Eðer isimi deðiþtireceksek en fazla 11 karekterden oluþan isimi yazarak enter tuþuna basarýz. Bu iþlemi þu þekilde de yapabiliriz: Label A: Salih enter bas.
+
+                      Toplu Ýþlem Dosyalarý: (Batch file)
+   Çok sýk olarak kullanýlan komutlarýn biraraya getirilmesiyle oluþturulan dosyaya Toplu Ýþlem Dosyasý denir. Toplu iþlem dosyalarýnýn uzantýlarý Bat olmak zorundadýr.  Toplu iþlem dosyalarý Autoexec.bat ve diðerleri olmak üzere ikiye ayrýlýr. Autoexec.bat dosyasý içerisindeki komutlar, bilgisayar açýldýðýnda kendiliðinden uygulanýr. Diðer toplu iþlem dosyalarý ise, isimleri ile çaðýrýlýr ve ancak isimleri yazýldýðýnda çalýþýrlar. Toplu iþlem dosyalarýnýn içerisinde Dos komutlarýnýn yaný sýra toplu Ýþlem Dosyasý özel Toplu iþlem komutlarý kullanýlýr. Toplu iþlem dosyalarýnda kullanýlan komutlar ise þunlardýr: 
+1- Echo: Ekrana mesaj gönderir. Kullanýmý: Toplu iþlem dosyasý oluþtururken ekranda istediðiniz mesajýn görüntülenmesini istediðinizde bu komut kullanýlýr:
+2- Örnek:   echo "Program kuruldu"
+  Echo off: Dosya içerisinde yazdýðýmýz komut satýrlarýnýn ekranda görüntülenmesini engeller.
+Kullanýmý: Görüntülenmesini istemediðimiz komut satýrýndan önceki satýrda @ (ed) iþaretini satýrýn baþýna yazarak hiç aralýk vermeden echo off yazarak bir sonraki satýra geçeriz.   3-  Echo on: Dosyamýzda echo on komutunu kullandýðýmýzda bundan sonraki komut satýrlarý ekranda görüntülenecektir.
+  4-  Pause: Toplu iþlem dosyasý pause komut satýrýna geldiðinde klavyeden bir tuþa basana kadar yaptýðý iþlemi durdurur. Herhangi bir tuþa basmamýz halinde iþlemine kaldýðý yerden devam eder.    Þimdi bir toplu iþlem dosyasý örneði yazalým:
+@echo off
+cd\
+C:
+cd C:\tiny
+ttalk.exe
+ttconf load merhaba
+cd\
+echo on
+
+   "TÝNY PROGRAMINIZ HAZIRLANDI"
+   Yukarýda okuduðunuz toplu iþlem dosyasýnda öncelikle komut satýrlarýnýn ekranda görüntülenmemesi için ilk satýrý yazdýk. Daha sonra kök dizine döndük. Bulunduðumuz kök dizin çalýþtýrmak istediðimiz kök dizin olmamasý olasýlýðýný düþünerek C sürücüsüne bilgisayarý yönlendirdik. Bundan sonra C sürücüsünde bulunan Tiny dizinine gittik. Tiny dizinine girdikten sonra bu programý çalýþtýracak olan exe dosyasýný çalýþtýrdýk. Arkasýndan bu programýn saðlýklý çalýþmasý için programa ait olan configrasyon dosyasýnýn yüklenmesini saðladýk. Program çalýþtýktan sonra Tiny dizinini terk ettik ve ekrana programýn hazýr olduðunu bildiren bir mesaj gönderildi. Sizlerde çok sýk kullandýðýnýz komutlardan oluþan toplu iþlem dosyalarý üreterek zamandan kazanabilirsiniz. 
+PW PROGRAMI F2 F3 F4 TUÞLARININ ALDIKLARI GÖREVLER  (6 . VERÝSÝYONA AÝT TUÞLAR ) 
+F2 ' YE AÝT TUÞLAT : 
+1 : Dosya yükleme ctrl + G 
+2 : Dosya sakla ctrl + S 
+3 : Dosya sil  
+4 : Araya ekle 
+5 : Yazýcý
+6 : Ekraný boþaltma
+7 : Tuþ tanýmlama
+F3 2' e AÝT TUÞLAR 
+1 : Satýr Ekleme ctrl + I
+2 : Kelime Silme ctrl + W
+3 : Satýr silme ctrl + L 
+4 : Bloklama ctrl + T 
+5 : Paste - Yapýþtýrma ctrl + P 
+6 : Koyu kelime ctrl + B 
+7 : Kelime alt çizgi ctrl + U 
+8 : Çizim 
+9 : Bul ctlr + F 
+F4 'e AÝT TUÞLAR 
+1 : Marj ayarý 
+2 : Üst ve alt yazý 
+3 : Tab ayarý 
+4 : Ekran bölme ctrl + N
+5 : Çift satýr ctrl + D 
+6 : Satýr ortalama ctrl + X 
+7 : Sola yasla
+8 : Saða yasla
